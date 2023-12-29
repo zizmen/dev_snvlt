@@ -1,0 +1,1863 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="cNb8KLe" resname="I send my request">
+        <source>I send my request</source>
+        <target>J'envoie ma demande</target>
+      </trans-unit>
+      <trans-unit id="4l7NfAs" resname="SNVLT Request for statistical documents">
+        <source>SNVLT Request for statistical documents</source>
+        <target>SNVLT Demande de documents statistiques</target>
+      </trans-unit>
+      <trans-unit id="NjnvzQi" resname="Hi">
+        <source>Hi</source>
+        <target>Bonjour</target>
+      </trans-unit>
+      <trans-unit id="a_EPDyT" resname="the forestry company ">
+        <source>the forestry company </source>
+        <target>la société forestière </target>
+      </trans-unit>
+      <trans-unit id="lk5tqET" resname=" has sent you a request relating to an order for ">
+        <source> has sent you a request relating to an order for </source>
+        <target> vous a envoyé une demande en rapport avec une commande de </target>
+      </trans-unit>
+      <trans-unit id="cyYVUXh" resname=" Please connect to https://127.0.0.1:8000 to confirm or deny your request.">
+        <source> Please connect to https://127.0.0.1:8000 to confirm or deny your request.</source>
+        <target> SVP, connectez-vous à l'adresse https://127.0.0.1:8000 pour confirmer ou rejeter la demande.</target>
+      </trans-unit>
+      <trans-unit id="ciEuSXf" resname="Sincerly,">
+        <source>Sincerly,</source>
+        <target>Cordialement,</target>
+      </trans-unit>
+      <trans-unit id="YtT9Gqv" resname="the forestry industry ">
+        <source>the forestry industry </source>
+        <target>l'industrie forestière </target>
+      </trans-unit>
+      <trans-unit id="f52lbdJ" resname="the exporter">
+        <source>the exporter</source>
+        <target>l'exportateur</target>
+      </trans-unit>
+      <trans-unit id="w5HxB" resname="The document request was sent successfully">
+        <source>The document request was sent successfully</source>
+        <target>La demande de document a été envoyé avec succès</target>
+      </trans-unit>
+      <trans-unit id="5MJ1nXE" resname="Validate the request">
+        <source>Validate the request</source>
+        <target>Valider la demande</target>
+      </trans-unit>
+      <trans-unit id="UnRDLfl" resname="The request has just been validated successfully">
+        <source>The request has just been validated successfully</source>
+        <target>La requête a été validée avec succès</target>
+      </trans-unit>
+      <trans-unit id="RMhp9Nb" resname="You must log in first to access SNVLT">
+        <source>You must log in first to access SNVLT</source>
+        <target>Vous devez vous connecter afin d'accéder à SNVLT</target>
+      </trans-unit>
+      <trans-unit id="3cYh.38" resname="Edit Users Group">
+        <source>Edit Users Group</source>
+        <target>Modifier le Groupe Utilisateurs</target>
+      </trans-unit>
+      <trans-unit id="YEPETvA" resname="Add Users Group">
+        <source>Add Users Group</source>
+        <target>Ajouter un Groupe Utilisateurs</target>
+      </trans-unit>
+      <trans-unit id="wbGofBK" resname="Group has been edited successfully">
+        <source>Group has been edited successfully</source>
+        <target>Le group a été mis à jour avec succès</target>
+      </trans-unit>
+      <trans-unit id="XaCCziZ" resname="Permissions added by">
+        <source>Permissions added by</source>
+        <target>Permissions ajoutées par</target>
+      </trans-unit>
+      <trans-unit id="KSsqa61" resname="Permissions removed by">
+        <source>Permissions removed by</source>
+        <target>Permissions supprimées par</target>
+      </trans-unit>
+      <trans-unit id="pggErQR" resname="Group has been created">
+        <source>Group has been created</source>
+        <target>Le grouope a été créé</target>
+      </trans-unit>
+      <trans-unit id="DPDHkqN" resname="SNVLT membership application">
+        <source>SNVLT membership application</source>
+        <target>SNVLT Demande d'accès</target>
+      </trans-unit>
+      <trans-unit id="RsBHMlK" resname="Your registration has just been taken into account. You will receive a validation email from your administrator. Cheers!">
+        <source>Your registration has just been taken into account. You will receive a validation email from your administrator. Cheers!</source>
+        <target>Votre inscription a été prise en compte. Vous recevrez un email de validation de la part de votre admpinistrateur. Félicitations!</target>
+      </trans-unit>
+      <trans-unit id="QTnKasX" resname="You have a new membership application for SNVLT. Please log in at https:127.0.0.1:8000 &#10;&#10;">
+        <source>You have a new membership application for SNVLT. Please log in at https:127.0.0.1:8000 
+
+</source>
+        <target>Vous avez une nouvelle demande d'accès SNVLT. SVP, Connectez-vous à l'adresse https:127.0.0.1:8000
+
+        </target>
+      </trans-unit>
+      <trans-unit id="F7WctIl" resname="Cheers!">
+        <source>Cheers!</source>
+        <target>Félicitations!</target>
+      </trans-unit>
+      <trans-unit id="IGHbe2s" resname="Edit Stock">
+        <source>Edit Stock</source>
+        <target>Modifier le stock</target>
+      </trans-unit>
+      <trans-unit id="tY5AJEo" resname="Add Stock">
+        <source>Add Stock</source>
+        <target>Mouvementer le stock</target>
+      </trans-unit>
+      <trans-unit id="8AwQISr" resname="The document stock has just been successfully updated">
+        <source>The document stock has just been successfully updated</source>
+        <target>Le stock de document a été mouvementé avec succès</target>
+      </trans-unit>
+      <trans-unit id="jheOaiM" resname="Structure mamanger">
+        <source>Structure mamanger</source>
+        <target>Responsable de la structure</target>
+      </trans-unit>
+      <trans-unit id="TapY4ns" resname=" Your account has just been created in SNVLT and your verification code is ">
+        <source> Your account has just been created in SNVLT and your verification code is </source>
+        <target> Votre compte SNVLT vient d'être créé and votre code de vérification est </target>
+      </trans-unit>
+      <trans-unit id="UUYyG5Z" resname=" Your accesses have been sent to you by email. THANKS.">
+        <source> Your accesses have been sent to you by email. THANKS.</source>
+        <target> Vos accès vous ont été envoyés par mail. MERCI.</target>
+      </trans-unit>
+      <trans-unit id="VWEDVso" resname="Please confirm your email">
+        <source>Please confirm your email</source>
+        <target>Confirmez votre email SVP</target>
+      </trans-unit>
+      <trans-unit id="UJTeMLg" resname="The structure manager has just been created">
+        <source>The structure manager has just been created</source>
+        <target>Le responsable de la structure a été enregistré</target>
+      </trans-unit>
+      <trans-unit id="CMLpkBE" resname="The logging company has been updated">
+        <source>The logging company has been updated</source>
+        <target>La société forestière a été enregistrée</target>
+      </trans-unit>
+      <trans-unit id="CG9UULI" resname="Edit my profile">
+        <source>Edit my profile</source>
+        <target>Modifier mon profil</target>
+      </trans-unit>
+      <trans-unit id="3Z4Na9A" resname="Your profile has been edited successfully">
+        <source>Your profile has been edited successfully</source>
+        <target>YVotre profil a été modifié avec succès</target>
+      </trans-unit>
+      <trans-unit id="Ycn7yT6" resname="The requester has been added to your organization">
+        <source>The requester has been added to your organization</source>
+        <target>Le demandeur (d'accès) a été ajouté à votre organisation avec succès</target>
+      </trans-unit>
+      <trans-unit id="3E4CRqJ" resname="Add an attribution">
+        <source>Add an attribution</source>
+        <target>Ajouter une attribution</target>
+      </trans-unit>
+      <trans-unit id="3V8tns5" resname="Edit Group">
+        <source>Edit Group</source>
+        <target>Modifier un groupe</target>
+      </trans-unit>
+      <trans-unit id="ewhouu6" resname="Edit Cantonment">
+        <source>Edit Cantonment</source>
+        <target>Modifier un cantonnement</target>
+      </trans-unit>
+      <trans-unit id="evz6YPT" resname="Add Cantonment">
+        <source>Add Cantonment</source>
+        <target>Ajouter un Cantonment</target>
+      </trans-unit>
+      <trans-unit id="jFQ4z_q" resname="The forest cantonment has just been successfully updated">
+        <source>The forest cantonment has just been successfully updated</source>
+        <target>Le cantonnement forestier a été mis à jour avec succès</target>
+      </trans-unit>
+      <trans-unit id="S3K87wh" resname="Edit Departmental Direction">
+        <source>Edit Departmental Direction</source>
+        <target>Miodifier la Direction Départementale</target>
+      </trans-unit>
+      <trans-unit id="TL0uDMy" resname="Add Departmental Direction">
+        <source>Add Departmental Direction</source>
+        <target>Ajouter une Direction Départementale</target>
+      </trans-unit>
+      <trans-unit id="cfZnHvf" resname="THe Departmental Direction has been updated successfully">
+        <source>THe Departmental Direction has been updated successfully</source>
+        <target>La Direction Départementale a été mise à jour avec succès</target>
+      </trans-unit>
+      <trans-unit id="NsuHWfA" resname="Edit Ministry Direction">
+        <source>Edit Ministry Direction</source>
+        <target>Modifier la Direction MINEF</target>
+      </trans-unit>
+      <trans-unit id="r4GgEMK" resname="Add Ministry Direction">
+        <source>Add Ministry Direction</source>
+        <target>Ajouter une Direction MINEF</target>
+      </trans-unit>
+      <trans-unit id="vu66qVR" resname="Ministry Direction has been edited and updated successfully">
+        <source>Ministry Direction has been edited and updated successfully</source>
+        <target>La Direction MINEF a été modifiée avec succès</target>
+      </trans-unit>
+      <trans-unit id="kTTyKhE" resname="Edit Operator Document">
+        <source>Edit Operator Document</source>
+        <target>Modifier le document Opérateur</target>
+      </trans-unit>
+      <trans-unit id="lS4p2Lu" resname="Add Operator Document">
+        <source>Add Operator Document</source>
+        <target>Ajouter un Document Opérateur</target>
+      </trans-unit>
+      <trans-unit id="bc8Zs0t" resname="Operator document has been updated successfully">
+        <source>Operator document has been updated successfully</source>
+        <target>Le document Opérateur a été modifié avec succès</target>
+      </trans-unit>
+      <trans-unit id="oSYLnt2" resname="Edit Regional Direction">
+        <source>Edit Regional Direction</source>
+        <target>Modifier la Direction Régionale</target>
+      </trans-unit>
+      <trans-unit id=".xZeivT" resname="La Direction Régionale vient dêtre éditée avec succès">
+        <source>La Direction Régionale vient dêtre éditée avec succès</source>
+        <target>La Direction Régionale vient dêtre éditée avec succès</target>
+      </trans-unit>
+      <trans-unit id="FQAUniG" resname="Add Regional Direction">
+        <source>Add Regional Direction</source>
+        <target>Ajouter une Direction Régionale</target>
+      </trans-unit>
+      <trans-unit id="CJ1Ind9" resname="The requested entity was not found.">
+        <source>The requested entity was not found.</source>
+        <target>L'entité demandée n'a pas été trouvée.</target>
+      </trans-unit>
+      <trans-unit id="rg.G9lv" resname="Edit Wood species">
+        <source>Edit Wood species</source>
+        <target>Modifier l'essence forestière</target>
+      </trans-unit>
+      <trans-unit id="1x4q7LL" resname="Wood species has been updated successfully">
+        <source>Wood species has been updated successfully</source>
+        <target>L'essence forestière a été mise à jour avec succès</target>
+      </trans-unit>
+      <trans-unit id="9qAIYMb" resname="Add Wood species">
+        <source>Add Wood species</source>
+        <target>Ajouter une assence forestière</target>
+      </trans-unit>
+      <trans-unit id="VoFX9af" resname="Edit Forester">
+        <source>Edit Forester</source>
+        <target>Modifier le forestier</target>
+      </trans-unit>
+      <trans-unit id="bAVliBV" resname="Add Forester">
+        <source>Add Forester</source>
+        <target>Ajouter le forestier</target>
+      </trans-unit>
+      <trans-unit id="zH48o2B" resname="The forester has been updated successfuylly">
+        <source>The forester has been updated successfuylly</source>
+        <target>Le forestier a été mise à jour avec succès</target>
+      </trans-unit>
+      <trans-unit id="KS1.7oD" resname="Edit Exporter">
+        <source>Edit Exporter</source>
+        <target>Modifier l'exportateur</target>
+      </trans-unit>
+      <trans-unit id="DcTRVhJ" resname="Add Exporter">
+        <source>Add Exporter</source>
+        <target>Ajouter l'exportateur</target>
+      </trans-unit>
+      <trans-unit id="if57B6j" resname="Exporter file has been updated successfully">
+        <source>Exporter file has been updated successfully</source>
+        <target>Le fichier Exportateur a été mis à jour avec succès</target>
+      </trans-unit>
+      <trans-unit id=".aFrpJ_" resname="Edit Forest">
+        <source>Edit Forest</source>
+        <target>Modifier la forêt</target>
+      </trans-unit>
+      <trans-unit id="FaYzSjR" resname="Forest has been edited successfully">
+        <source>Forest has been edited successfully</source>
+        <target>La forêt a été mise à jour avec sucès</target>
+      </trans-unit>
+      <trans-unit id="5tkQEc8" resname="Add Forest">
+        <source>Add Forest</source>
+        <target>Ajouter une forêt</target>
+      </trans-unit>
+      <trans-unit id="zwL1I1h" resname="Edit Legality grid">
+        <source>Edit Legality grid</source>
+        <target>Editer la Grille de Légalité</target>
+      </trans-unit>
+      <trans-unit id="WYpuot7" resname="Edit Document template">
+        <source>Edit Document template</source>
+        <target>Modifier le modèle de document</target>
+      </trans-unit>
+      <trans-unit id="VlRs07r" resname="Add Document template">
+        <source>Add Document template</source>
+        <target>Ajouter un modèle de document</target>
+      </trans-unit>
+      <trans-unit id="vCdATMH" resname="Document template has been edited successfully">
+        <source>Document template has been edited successfully</source>
+        <target>Le modèle de document a été mis à jour avec succès</target>
+      </trans-unit>
+      <trans-unit id="52zAugA" resname="Edit Model">
+        <source>Edit Model</source>
+        <target>Modifier le modèle</target>
+      </trans-unit>
+      <trans-unit id="cGDoJAZ" resname="Add Model">
+        <source>Add Model</source>
+        <target>Ajouter un modèle</target>
+      </trans-unit>
+      <trans-unit id="iIyxbHf" resname="Model has been updated successfully">
+        <source>Model has been updated successfully</source>
+        <target>Le modèle à mis à jour avec sucès</target>
+      </trans-unit>
+      <trans-unit id="qkzx0Yw" resname="Edit forester checkpoint">
+        <source>Edit forester checkpoint</source>
+        <target>Modifier le poste forestier</target>
+      </trans-unit>
+      <trans-unit id="l7aI_xT" resname="forester checkpoint has been edited succesfully">
+        <source>forester checkpoint has been edited succesfully</source>
+        <target>Le poste forestier a été mis à jour avec succès</target>
+      </trans-unit>
+      <trans-unit id="cuYBHyh" resname="Add forester checkpoint">
+        <source>Add forester checkpoint</source>
+        <target>Ajouter un poste forestier</target>
+      </trans-unit>
+      <trans-unit id="uZISCvx" resname="Edit Ministry service">
+        <source>Edit Ministry service</source>
+        <target>Modifier le service MINEF</target>
+      </trans-unit>
+      <trans-unit id="cicbfW7" resname="Add Ministry service">
+        <source>Add Ministry service</source>
+        <target>Ajouter un service MINEF</target>
+      </trans-unit>
+      <trans-unit id="lbJ17Hu" resname="Ministry service has been edited successfully">
+        <source>Ministry service has been edited successfully</source>
+        <target>Le service MINEF a été mis à jour avec succès</target>
+      </trans-unit>
+      <trans-unit id="qQktLF3" resname="Edit Authorization Type">
+        <source>Edit Authorization Type</source>
+        <target>Modifier le type d'Autorisation</target>
+      </trans-unit>
+      <trans-unit id="PneP96i" resname="Add Authorization Type">
+        <source>Add Authorization Type</source>
+        <target>Ajouter un type d'Autorisation</target>
+      </trans-unit>
+      <trans-unit id="2771hTk" resname="Authorization Type has been edited and updated successfully">
+        <source>Authorization Type has been edited and updated successfully</source>
+        <target>Le type d'Autorisation a été mis à jour avec succès</target>
+      </trans-unit>
+      <trans-unit id="yDSPEOd" resname="Edit statistical document type">
+        <source>Edit statistical document type</source>
+        <target>Modifier le type de document statistique</target>
+      </trans-unit>
+      <trans-unit id="pJq.8x0" resname="Add statistical document type">
+        <source>Add statistical document type</source>
+        <target>Ajouter le type de document statistique</target>
+      </trans-unit>
+      <trans-unit id="ZjvDLle" resname="Statistical document type has been updated successfully">
+        <source>Statistical document type has been updated successfully</source>
+        <target>Le type de document statistique a été mis à jour avec succès</target>
+      </trans-unit>
+      <trans-unit id="Eee83UH" resname="Edit Wood Factory">
+        <source>Edit Wood Factory</source>
+        <target>Modifier l'usine</target>
+      </trans-unit>
+      <trans-unit id="YKaxq6k" resname="Wood Factory has been edited successfully">
+        <source>Wood Factory has been edited successfully</source>
+        <target>L'usine forestière a été mise à jour avec succès</target>
+      </trans-unit>
+      <trans-unit id="hpWlheT" resname="Please Confirm your Email">
+        <source>Please Confirm your Email</source>
+        <target>SVP, Confirmez votre email</target>
+      </trans-unit>
+      <trans-unit id="PaInB_f" resname="No reset password token found in the URL or in the session.">
+        <source>No reset password token found in the URL or in the session.</source>
+        <target>Aucun jeton de réinitialisation de mot de passe trouvé dans l'URL ou la session.</target>
+      </trans-unit>
+      <trans-unit id="ATJ8qA9" resname="Your password reset request">
+        <source>Your password reset request</source>
+        <target>Votre demande de réinitialisation de mot de passe</target>
+      </trans-unit>
+      <trans-unit id="A0qYywV" resname="Sorry, Your access has been blocked by your administrator">
+        <source>Sorry, Your access has been blocked by your administrator</source>
+        <target>Désolé, Votre compte a été bloqué par votre administrateur</target>
+      </trans-unit>
+      <trans-unit id="W0LPzOG" resname="New document for validation">
+        <source>New document for validation</source>
+        <target>Nouveau document pour validation</target>
+      </trans-unit>
+      <trans-unit id="xo3gE6d" resname="The Operator ">
+        <source>The Operator </source>
+        <target>L'opérateur </target>
+      </trans-unit>
+      <trans-unit id="XTk010F" resname=" has sent to you a new document . Please click on this notification to display the content.">
+        <source> has sent to you a new document . Please click on this notification to display the content.</source>
+        <target> vous a envoyé un nouveau document . Veuillez, SVP cliquez sur la notification pour visualiser les détails..</target>
+      </trans-unit>
+      <trans-unit id="zCHL1Me" resname="Information about your documant validation request">
+        <source>Information about your documant validation request</source>
+        <target>Information concernant votre demande de validation Document</target>
+      </trans-unit>
+      <trans-unit id="yeYpDgn" resname="Hi ">
+        <source>Hi </source>
+        <target>Bonjour </target>
+      </trans-unit>
+      <trans-unit id="LsWj8ML" resname="Hello ">
+        <source>Hello </source>
+        <target>Bonjour </target>
+      </trans-unit>
+      <trans-unit id="EXjdTeU" resname="Notification accepted by">
+        <source>Notification accepted by</source>
+        <target>Notification acceptée par</target>
+      </trans-unit>
+      <trans-unit id="n.Y3343" resname="The document ">
+        <source>The document </source>
+        <target>Le document </target>
+      </trans-unit>
+      <trans-unit id="8ffff4b" resname=" has been generated successfully">
+        <source> has been generated successfully</source>
+        <target> a été généré avec succès</target>
+      </trans-unit>
+      <trans-unit id="23TpZfr" resname="SNVLT REGISTRATION">
+        <source>SNVLT REGISTRATION</source>
+        <target>SNVLT INSCRIPTION</target>
+      </trans-unit>
+      <trans-unit id="jnwQquN" resname="NOT DEFINED">
+        <source>NOT DEFINED</source>
+        <target>NOT DEFINI</target>
+      </trans-unit>
+      <trans-unit id="vKsDYdH" resname="You have been added as ">
+        <source>You have been added as </source>
+        <target>Vous avez été ajouté en tant que </target>
+      </trans-unit>
+      <trans-unit id="fmUXCpl" resname=" of the entity">
+        <source> of the entity</source>
+        <target> de l'entité</target>
+      </trans-unit>
+      <trans-unit id="YqrqZBr" resname=" WELCOME">
+        <source> WELCOME</source>
+        <target> BIENVENUE</target>
+      </trans-unit>
+      <trans-unit id="oFxMRv_" resname="Hi! Please for more security, Don't forget to reset your password">
+        <source>Hi! Please for more security, Don't forget to reset your password</source>
+        <target>Bonjour! Pour plus de sécurité, Nous vous conseillons de changer votre mot de passe</target>
+      </trans-unit>
+      <trans-unit id="C6OiYLy" resname="SNVLT SECURITY">
+        <source>SNVLT SECURITY</source>
+        <target>SNVLT SECURITE</target>
+      </trans-unit>
+      <trans-unit id="xb28C5h" resname="Statistic document">
+        <source>Statistic document</source>
+        <target>Document statistique</target>
+      </trans-unit>
+      <trans-unit id="hgDMI8K" resname="The document is mandatory">
+        <source>The document is mandatory</source>
+        <target>Le document est obligatoire</target>
+      </trans-unit>
+      <trans-unit id="gP4xfQX" resname="Quantity is mandatory">
+        <source>Quantity is mandatory</source>
+        <target>La Quantité est obligatoire</target>
+      </trans-unit>
+      <trans-unit id="q6SxUYN" resname="The maximum number of documents to generate is {{ limit }}">
+        <source>The maximum number of documents to generate is {{ limit }}</source>
+        <target>Le Maximmum de documents à générer est </target>
+      </trans-unit>
+      <trans-unit id="pqV5bwI" resname="The minimum number of documents to generate is {{ limit }}">
+        <source>The minimum number of documents to generate is {{ limit }}</source>
+        <target>Le Minimum de documents à générer est </target>
+      </trans-unit>
+      <trans-unit id="jaZ.UbD" resname="Edit or Add new Group name">
+        <source>Edit or Add new Group name</source>
+        <target>Modifier ou ajouter un nouveau groupe</target>
+      </trans-unit>
+      <trans-unit id="di67cO8" resname="Group name">
+        <source>Group name</source>
+        <target>Dénomination du Groupe</target>
+      </trans-unit>
+      <trans-unit id="evSsnsm" resname="Please Group name is mandatory">
+        <source>Please Group name is mandatory</source>
+        <target>SVP, le nom du groupe est obligatoire</target>
+      </trans-unit>
+      <trans-unit id="P7Nylwc" resname="The group name must contain at least ">
+        <source>The group name must contain at least </source>
+        <target>The group name must contain at least </target>
+      </trans-unit>
+      <trans-unit id="NZVj2rE" resname=" characters">
+        <source> characters</source>
+        <target> caractères</target>
+      </trans-unit>
+      <trans-unit id="FdiENcm" resname="Upload your image">
+        <source>Upload your image</source>
+        <target>Charger votre photo</target>
+      </trans-unit>
+      <trans-unit id="pQGnCkK" resname="Model Name">
+        <source>Model Name</source>
+        <target>Modèle</target>
+      </trans-unit>
+      <trans-unit id="g8R5Ivb" resname="The model name cannot be null">
+        <source>The model name cannot be null</source>
+        <target>Le modèle ne peut être nul</target>
+      </trans-unit>
+      <trans-unit id="xL82GNy" resname="The authorization cannot be blank">
+        <source>The authorization cannot be blank</source>
+        <target>L'autorisation ne peut être vide</target>
+      </trans-unit>
+      <trans-unit id="8y7TJE4" resname="The Operator is mandatory">
+        <source>The Operator is mandatory</source>
+        <target>L'opérateur est Obligatoire</target>
+      </trans-unit>
+      <trans-unit id="M15Tnjz" resname="My document requests">
+        <source>My document requests</source>
+        <target>Mes demandes de documents</target>
+      </trans-unit>
+      <trans-unit id="Xaj3_8K" resname="Back to list">
+        <source>Back to list</source>
+        <target>Retour à la liste</target>
+      </trans-unit>
+      <trans-unit id="XRekXJu" resname="Send my request">
+        <source>Send my request</source>
+        <target>J'envoie ma demande</target>
+      </trans-unit>
+      <trans-unit id="._fBeEw" resname="My documents requests">
+        <source>My documents requests</source>
+        <target>Mes demandes de documents</target>
+      </trans-unit>
+      <trans-unit id="n9coxmy" resname="Add">
+        <source>Add</source>
+        <target>Ajouter</target>
+      </trans-unit>
+      <trans-unit id="1r2MCu7" resname="Document">
+        <source>Document</source>
+        <target>Document</target>
+      </trans-unit>
+      <trans-unit id="giurjUG" resname="Quantity">
+        <source>Quantity</source>
+        <target>Quantité</target>
+      </trans-unit>
+      <trans-unit id="zFpB5La" resname="Request Date">
+        <source>Request Date</source>
+        <target>Date de demande</target>
+      </trans-unit>
+      <trans-unit id="kg5BPH1" resname="Status">
+        <source>Status</source>
+        <target>Statut</target>
+      </trans-unit>
+      <trans-unit id="XBg821r" resname="Statistical document sheet">
+        <source>Statistical document sheet</source>
+        <target>Fiche document statistique</target>
+      </trans-unit>
+      <trans-unit id="cRhNmBr" resname="Document No.">
+        <source>Document No.</source>
+        <target>Document N°</target>
+      </trans-unit>
+      <trans-unit id="sGaKhuv" resname="Document Type">
+        <source>Document Type</source>
+        <target>Type de Document</target>
+      </trans-unit>
+      <trans-unit id="ho6ywDm" resname="Number of pages">
+        <source>Number of pages</source>
+        <target>Nombre de pages</target>
+      </trans-unit>
+      <trans-unit id="d1tb_WR" resname="Created at">
+        <source>Created at</source>
+        <target>Créé le</target>
+      </trans-unit>
+      <trans-unit id="ElRmuCH" resname="By">
+        <source>By</source>
+        <target>Par</target>
+      </trans-unit>
+      <trans-unit id="gZGIjdl" resname="Assigned">
+        <source>Assigned</source>
+        <target>Assigné</target>
+      </trans-unit>
+      <trans-unit id="_RcRZFk" resname="YES">
+        <source>YES</source>
+        <target>OUI</target>
+      </trans-unit>
+      <trans-unit id="I3lNkcU" resname="NO">
+        <source>NO</source>
+        <target>NON</target>
+      </trans-unit>
+      <trans-unit id="kEbaFq6" resname="Pages">
+        <source>Pages</source>
+        <target>Pages</target>
+      </trans-unit>
+      <trans-unit id="lE1PlMu" resname="My Groups - Add a group">
+        <source>My Groups - Add a group</source>
+        <target>Mes Groupes - Ajouter un groupe</target>
+      </trans-unit>
+      <trans-unit id="akAP3Ox" resname="check or uncheck permissions">
+        <source>check or uncheck permissions</source>
+        <target>Cocher ou Décocher des permissions</target>
+      </trans-unit>
+      <trans-unit id="q8zHjMk" resname="Permissions">
+        <source>Permissions</source>
+        <target>Permissions</target>
+      </trans-unit>
+      <trans-unit id="KbaO3il" resname="Update Group Permissions">
+        <source>Update Group Permissions</source>
+        <target>Mettre à jour les permissions du groupe</target>
+      </trans-unit>
+      <trans-unit id="WTYVjlv" resname="Add Document Type">
+        <source>Add Document Type</source>
+        <target>Ajouter un type de document</target>
+      </trans-unit>
+      <trans-unit id="Gge4g9e" resname="Edit Document Type">
+        <source>Edit Document Type</source>
+        <target>Modifier un type de document</target>
+      </trans-unit>
+      <trans-unit id="6duc7cG" resname="My Groups">
+        <source>My Groups</source>
+        <target>Mes Groupes</target>
+      </trans-unit>
+      <trans-unit id="NMoOdmC" resname="Group">
+        <source>Group</source>
+        <target>Groupe</target>
+      </trans-unit>
+      <trans-unit id="S3NepxS" resname="SNVLT">
+        <source>SNVLT</source>
+        <target>SNVLT</target>
+      </trans-unit>
+      <trans-unit id="Qw6ikVI" resname="Responsable de structure">
+        <source>Responsable de structure</source>
+        <target>Responsable de structure</target>
+      </trans-unit>
+      <trans-unit id="EQQMgKs" resname="Ajouter un responsable de structure">
+        <source>Ajouter un responsable de structure</source>
+        <target>Ajouter un responsable de structure</target>
+      </trans-unit>
+      <trans-unit id="dBz1lCM" resname="All Users">
+        <source>All Users</source>
+        <target>Tous les utilisateurs</target>
+      </trans-unit>
+      <trans-unit id="rTF7tyb" resname="Add a manager&quot;">
+        <source>Add a manager"</source>
+        <target>Ajouter un responsable"</target>
+      </trans-unit>
+      <trans-unit id="zuAh8bY" resname="My Team">
+        <source>My Team</source>
+        <target>Mon Equipe</target>
+      </trans-unit>
+      <trans-unit id="Ixc5OtD" resname="locked users">
+        <source>locked users</source>
+        <target>Utilisateurs bloqués</target>
+      </trans-unit>
+      <trans-unit id="XpJO2cR" resname="Firstname and Lastname">
+        <source>Firstname and Lastname</source>
+        <target>Nom et Prénoms</target>
+      </trans-unit>
+      <trans-unit id="lpzL089" resname="Email">
+        <source>Email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="sobH9uD" resname="Mobile Phone">
+        <source>Mobile Phone</source>
+        <target>Téléphone mobile</target>
+      </trans-unit>
+      <trans-unit id="1pajW90" resname="Profile">
+        <source>Profile</source>
+        <target>Profil</target>
+      </trans-unit>
+      <trans-unit id="ZM.xMZ0" resname="Action">
+        <source>Action</source>
+        <target>Action</target>
+      </trans-unit>
+      <trans-unit id="o2UwQkd" resname="&quot;This account is locked&quot;">
+        <source>"This account is locked"</source>
+        <target>"Ce compte est bloqué"</target>
+      </trans-unit>
+      <trans-unit id="WQi8zyI" resname="Send Email">
+        <source>Send Email</source>
+        <target>Envoyer Email</target>
+      </trans-unit>
+      <trans-unit id="2.uzgnk" resname="See profile">
+        <source>See profile</source>
+        <target>Voir le profile</target>
+      </trans-unit>
+      <trans-unit id="Jxxi_i3" resname="My profile">
+        <source>My profile</source>
+        <target>Mon profil</target>
+      </trans-unit>
+      <trans-unit id="ZHz6kbI" resname="Firstname">
+        <source>Firstname</source>
+        <target>Prénoms</target>
+      </trans-unit>
+      <trans-unit id="htiPHRy" resname="Lastname">
+        <source>Lastname</source>
+        <target>Nom</target>
+      </trans-unit>
+      <trans-unit id="iE1VxLu" resname="Phone No">
+        <source>Phone No</source>
+        <target>Téléphone</target>
+      </trans-unit>
+      <trans-unit id="bDPtE4P" resname="Update Profile">
+        <source>Update Profile</source>
+        <target>Mise à jour Profil</target>
+      </trans-unit>
+      <trans-unit id="eIARgzp" resname="Notifications">
+        <source>Notifications</source>
+        <target>Notifications</target>
+      </trans-unit>
+      <trans-unit id="MP7fFtT" resname="My Notifications">
+        <source>My Notifications</source>
+        <target>Mes Notifications</target>
+      </trans-unit>
+      <trans-unit id="lbt4RPU" resname="Notification type">
+        <source>Notification type</source>
+        <target>Type de notification</target>
+      </trans-unit>
+      <trans-unit id="Um4Ah8w" resname="Description">
+        <source>Description</source>
+        <target>Description</target>
+      </trans-unit>
+      <trans-unit id="OeAsRqC" resname="Issuer">
+        <source>Issuer</source>
+        <target>Emetteur</target>
+      </trans-unit>
+      <trans-unit id="B22SDue" resname="Received on">
+        <source>Received on</source>
+        <target>Réçu le</target>
+      </trans-unit>
+      <trans-unit id="5LX.RLQ" resname="Membership validation">
+        <source>Membership validation</source>
+        <target>Validation Demande d'accès</target>
+      </trans-unit>
+      <trans-unit id="L3dmip3" resname="Message">
+        <source>Message</source>
+        <target>Message</target>
+      </trans-unit>
+      <trans-unit id="wpn5uFy" resname="Sender">
+        <source>Sender</source>
+        <target>Expéditeur</target>
+      </trans-unit>
+      <trans-unit id="GH6Auk2" resname="Mobile number">
+        <source>Mobile number</source>
+        <target>Numéro de téléphone mobile</target>
+      </trans-unit>
+      <trans-unit id="WH.DmLo" resname="Do you want to accept this requester as a member of your organization?">
+        <source>Do you want to accept this requester as a member of your organization?</source>
+        <target>Voulez-vous accepter ce demandeur en tant que membre de votre organisation?</target>
+      </trans-unit>
+      <trans-unit id="5pbjqiY" resname="Accept the member">
+        <source>Accept the member</source>
+        <target>Accepter le membre</target>
+      </trans-unit>
+      <trans-unit id="Iz6uEAX" resname="Refuse Member">
+        <source>Refuse Member</source>
+        <target>Refuser le membre</target>
+      </trans-unit>
+      <trans-unit id="czFtgq9" resname="SNVLT - Connexion">
+        <source>SNVLT - Connexion</source>
+        <target>SNVLT - Connexion</target>
+      </trans-unit>
+      <trans-unit id=".T4mkD6" resname="Enter Validation Code">
+        <source>Enter Validation Code</source>
+        <target>Entrer le code de validation</target>
+      </trans-unit>
+      <trans-unit id="3IZZ221" resname="Enter">
+        <source>Enter</source>
+        <target>Entrer</target>
+      </trans-unit>
+      <trans-unit id="WEgYKnv" resname="Statistical document requests Validation">
+        <source>Statistical document requests Validation</source>
+        <target>Validation de demandes de documents statistiques</target>
+      </trans-unit>
+      <trans-unit id="IpdgCQe" resname="Operator request Verification and Validation service">
+        <source>Operator request Verification and Validation service</source>
+        <target>Service de vérification et de validation de documents statistiques </target>
+      </trans-unit>
+      <trans-unit id="rg0A87g" resname="Operator Requests">
+        <source>Operator Requests</source>
+        <target>Demandes Opérateurs</target>
+      </trans-unit>
+      <trans-unit id="KREBoH." resname="Operator">
+        <source>Operator</source>
+        <target>Opérateur</target>
+      </trans-unit>
+      <trans-unit id="l_1gnqb" resname="Quantity requested">
+        <source>Quantity requested</source>
+        <target>Quantité demandée</target>
+      </trans-unit>
+      <trans-unit id="6boZSjI" resname="Request Validation">
+        <source>Request Validation</source>
+        <target>Validation demande</target>
+      </trans-unit>
+      <trans-unit id="n5WToHu" resname="Operator Request Validation">
+        <source>Operator Request Validation</source>
+        <target>Validation de demande Opérateur</target>
+      </trans-unit>
+      <trans-unit id="c.bs855" resname="Legal Documents">
+        <source>Legal Documents</source>
+        <target>Documents Légaux</target>
+      </trans-unit>
+      <trans-unit id="xxdlygV" resname="Logging data">
+        <source>Logging data</source>
+        <target>Données Forestières</target>
+      </trans-unit>
+      <trans-unit id="ggMvf.h" resname="Alerts / Violations">
+        <source>Alerts / Violations</source>
+        <target>Alertes / Violations</target>
+      </trans-unit>
+      <trans-unit id="W4H3DVm" resname="Document type">
+        <source>Document type</source>
+        <target>Type de Document</target>
+      </trans-unit>
+      <trans-unit id="UACc4dp" resname="File">
+        <source>File</source>
+        <target>Fichier</target>
+      </trans-unit>
+      <trans-unit id="de8EEUs" resname="Back to request list">
+        <source>Back to request list</source>
+        <target>Retour à la liste de demande</target>
+      </trans-unit>
+      <trans-unit id="94yVf5N" resname="Add Attribution">
+        <source>Add Attribution</source>
+        <target>Ajouter une Attribution</target>
+      </trans-unit>
+      <trans-unit id="qQLczgi" resname="Attribution">
+        <source>Attribution</source>
+        <target>Attribution</target>
+      </trans-unit>
+      <trans-unit id="dlKOwkj" resname="Edit an attribution">
+        <source>Edit an attribution</source>
+        <target>Modifier une attribution</target>
+      </trans-unit>
+      <trans-unit id="338bnOj" resname="Please Select forest">
+        <source>Please Select forest</source>
+        <target>SVP, Sélectionnez une forêt</target>
+      </trans-unit>
+      <trans-unit id="Pm80.Vl" resname="Please Select Logger">
+        <source>Please Select Logger</source>
+        <target>SVP, Sélectionnez un exploitant forestier</target>
+      </trans-unit>
+      <trans-unit id="shgd1ps" resname="Attributions">
+        <source>Attributions</source>
+        <target>Attributions</target>
+      </trans-unit>
+      <trans-unit id="67UeJQA" resname="Decision No.">
+        <source>Decision No.</source>
+        <target>N° Décision</target>
+      </trans-unit>
+      <trans-unit id="7tiLOv6" resname="Forest">
+        <source>Forest</source>
+        <target>Forêt</target>
+      </trans-unit>
+      <trans-unit id="SxuKo2C" resname="Owner">
+        <source>Owner</source>
+        <target>Attributaire</target>
+      </trans-unit>
+      <trans-unit id=".4BZ3Gd" resname="Actions">
+        <source>Actions</source>
+        <target>Actions</target>
+      </trans-unit>
+      <trans-unit id="Z7aWRoY" resname="Dashboard">
+        <source>Dashboard</source>
+        <target>Tableau de Bord</target>
+      </trans-unit>
+      <trans-unit id="APZqasw" resname="See all notifications">
+        <source>See all notifications</source>
+        <target>Voir toutes les notifications</target>
+      </trans-unit>
+      <trans-unit id="NOhCUHk" resname="You have no permissions with this account to access this page">
+        <source>You have no permissions with this account to access this page</source>
+        <target>Vous n'avez aucune permission pour accéder à cette page</target>
+      </trans-unit>
+      <trans-unit id="0YE5P33" resname="ACCESS DENIED">
+        <source>ACCESS DENIED</source>
+        <target>ACCES REFUSE</target>
+      </trans-unit>
+      <trans-unit id="61zLDa1" resname="Cantonments">
+        <source>Cantonments</source>
+        <target>Cantonnements</target>
+      </trans-unit>
+      <trans-unit id="3NHVIj9" resname="Name">
+        <source>Name</source>
+        <target>Nom</target>
+      </trans-unit>
+      <trans-unit id="vBEKbQc" resname="Responsible">
+        <source>Responsible</source>
+        <target>Responsable</target>
+      </trans-unit>
+      <trans-unit id="kvCJ8qc" resname="DD">
+        <source>DD</source>
+        <target>DD</target>
+      </trans-unit>
+      <trans-unit id="RBTNy3z" resname="RD">
+        <source>RD</source>
+        <target>DR</target>
+      </trans-unit>
+      <trans-unit id="wtnIppW" resname="Vérification de l'authenticité du document">
+        <source>Vérification de l'authenticité du document</source>
+        <target>Vérification de l'authenticité du document</target>
+      </trans-unit>
+      <trans-unit id="i_vnEMN" resname="! Sorry">
+        <source>! Sorry</source>
+        <target>! Désolé</target>
+      </trans-unit>
+      <trans-unit id="bjycb9A" resname="This document is not stored in SNVLT database">
+        <source>This document is not stored in SNVLT database</source>
+        <target>Ce document n'est pas référencié dans la base SNVLT</target>
+      </trans-unit>
+      <trans-unit id="JoZrPCA" resname="Merci">
+        <source>Merci</source>
+        <target>Merci</target>
+      </trans-unit>
+      <trans-unit id="p06amIn" resname="! Succès">
+        <source>! Succès</source>
+        <target>! Succès</target>
+      </trans-unit>
+      <trans-unit id="V81LBue" resname="Ce document est inscrit dans la base  et  autorisé dans le système SNVLT">
+        <source>Ce document est inscrit dans la base  et  autorisé dans le système SNVLT</source>
+        <target>Ce document est inscrit dans la base  et  autorisé dans le système SNVLT</target>
+      </trans-unit>
+      <trans-unit id="A.kO.Ki" resname="Cantonment">
+        <source>Cantonment</source>
+        <target>Cantonnement</target>
+      </trans-unit>
+      <trans-unit id="4iGuHWT" resname="Select DD">
+        <source>Select DD</source>
+        <target>Selectionner la DD</target>
+      </trans-unit>
+      <trans-unit id=".yNc4Z9" resname="Select RD">
+        <source>Select RD</source>
+        <target>Selectionner la DR</target>
+      </trans-unit>
+      <trans-unit id="S6a3E8y" resname="My legacy documents">
+        <source>My legacy documents</source>
+        <target>Mes documents légaux</target>
+      </trans-unit>
+      <trans-unit id="OPinOM4" resname="Status for step validation">
+        <source>Status for step validation</source>
+        <target>Statut Etapes de Validation</target>
+      </trans-unit>
+      <trans-unit id="5kYWeln" resname="Loggers">
+        <source>Loggers</source>
+        <target>Exploitants Forestiers</target>
+      </trans-unit>
+      <trans-unit id="YtGbUgI" resname="Forests">
+        <source>Forests</source>
+        <target>Forêts</target>
+      </trans-unit>
+      <trans-unit id="Ak3CBNe" resname="Area">
+        <source>Area</source>
+        <target>Aire</target>
+      </trans-unit>
+      <trans-unit id="mkEwGHl" resname="Forest Type">
+        <source>Forest Type</source>
+        <target>Type de Forêt</target>
+      </trans-unit>
+      <trans-unit id="DnaWAJM" resname="History">
+        <source>History</source>
+        <target>Historique</target>
+      </trans-unit>
+      <trans-unit id="LlZu.2g" resname="Legality Grid - Add Document Type">
+        <source>Legality Grid - Add Document Type</source>
+        <target>Grille de Légalité - Ajouter un type de document</target>
+      </trans-unit>
+      <trans-unit id="tTOUFHp" resname="Legality Grid">
+        <source>Legality Grid</source>
+        <target>Grille de Légalité</target>
+      </trans-unit>
+      <trans-unit id="e.RNYND" resname="Periodicity">
+        <source>Periodicity</source>
+        <target>Périodicité</target>
+      </trans-unit>
+      <trans-unit id="S75ygzn" resname="Elapsed time">
+        <source>Elapsed time</source>
+        <target>Durée</target>
+      </trans-unit>
+      <trans-unit id="HmRIUBR" resname="Add Model for Documents Validation">
+        <source>Add Model for Documents Validation</source>
+        <target>Ajouter un model de validation de documents</target>
+      </trans-unit>
+      <trans-unit id="wRqaoyd" resname="Model for Documents Validation">
+        <source>Model for Documents Validation</source>
+        <target>Model de validation de documents</target>
+      </trans-unit>
+      <trans-unit id="65X.kpC" resname="Only services or Directions with fullfilled Responsible emails can be displayed below">
+        <source>Only services or Directions with fullfilled Responsible emails can be displayed below</source>
+        <target>Seuls les services ou Directions avec les responsables dûment enregistrés seront affichés ci-dessous </target>
+      </trans-unit>
+      <trans-unit id="nIqVeav" resname="Direction">
+        <source>Direction</source>
+        <target>Direction</target>
+      </trans-unit>
+      <trans-unit id="1ncZDgq" resname="Service">
+        <source>Service</source>
+        <target>Service</target>
+      </trans-unit>
+      <trans-unit id="_5zMuWw" resname="Type Service">
+        <source>Type Service</source>
+        <target>Type Service</target>
+      </trans-unit>
+      <trans-unit id="B0D0ut4" resname="Sequence">
+        <source>Sequence</source>
+        <target>Séquence</target>
+      </trans-unit>
+      <trans-unit id="zj4As3M" resname="Service Type">
+        <source>Service Type</source>
+        <target>Type Service</target>
+      </trans-unit>
+      <trans-unit id="LtO7YMm" resname="Entity">
+        <source>Entity</source>
+        <target>Entité</target>
+      </trans-unit>
+      <trans-unit id="Ddl5w.i" resname="Modele Name">
+        <source>Modele Name</source>
+        <target>Modèle</target>
+      </trans-unit>
+      <trans-unit id="nqH0oru" resname="Change Status">
+        <source>Change Status</source>
+        <target>Changer le statut</target>
+      </trans-unit>
+      <trans-unit id="6wuTXRQ" resname="Ministry Services">
+        <source>Ministry Services</source>
+        <target>Services MINEF</target>
+      </trans-unit>
+      <trans-unit id="i5fAiqh" resname="Authorization type">
+        <source>Authorization type</source>
+        <target>Type Autorisation</target>
+      </trans-unit>
+      <trans-unit id="ylg544o" resname="Authorization">
+        <source>Authorization</source>
+        <target>Autorisation</target>
+      </trans-unit>
+      <trans-unit id="pZG76lm" resname="Statistical Document Type">
+        <source>Statistical Document Type</source>
+        <target>Type de document statistique</target>
+      </trans-unit>
+      <trans-unit id="SfTlfCY" resname="Doc">
+        <source>Doc</source>
+        <target>Doc</target>
+      </trans-unit>
+      <trans-unit id="E4x15et" resname="Number of pages to generate">
+        <source>Number of pages to generate</source>
+        <target>Nombre de pages à générer</target>
+      </trans-unit>
+      <trans-unit id="k8kchR5" resname="Price">
+        <source>Price</source>
+        <target>Prix</target>
+      </trans-unit>
+      <trans-unit id="0PvT9mH" resname="Remaining Stock">
+        <source>Remaining Stock</source>
+        <target>Stock restant</target>
+      </trans-unit>
+      <trans-unit id="vSTb9IR" resname="Hi! Please confirm your email!">
+        <source>Hi! Please confirm your email!</source>
+        <target>Bonjour! Confirmez SVP votre email!</target>
+      </trans-unit>
+      <trans-unit id="Ry3Xo6w" resname="Please confirm your email address by clicking the following link:">
+        <source>Please confirm your email address by clicking the following link:</source>
+        <target>SVP, veuillez confirmez votre email en cliquant sur le lien suivant :</target>
+      </trans-unit>
+      <trans-unit id="ITaQX9q" resname="Confirm my Email">
+        <source>Confirm my Email</source>
+        <target>Je confirme mon email</target>
+      </trans-unit>
+      <trans-unit id="87wG9uu" resname="This link will expire in">
+        <source>This link will expire in</source>
+        <target>Ce lien expire dans</target>
+      </trans-unit>
+      <trans-unit id="4oxgYRm" resname="below are your credentials">
+        <source>below are your credentials</source>
+        <target>Ci-dessous vos accès</target>
+      </trans-unit>
+      <trans-unit id="tRLZfny" resname="User">
+        <source>User</source>
+        <target>Utilisateur</target>
+      </trans-unit>
+      <trans-unit id="ebKkxZb" resname="your email address">
+        <source>your email address</source>
+        <target>Votre adresse mail</target>
+      </trans-unit>
+      <trans-unit id="588_9PF" resname="Password">
+        <source>Password</source>
+        <target>Mot de passe</target>
+      </trans-unit>
+      <trans-unit id="YDKw0K9" resname="Your telephone number preceded by your country code and without spaces (ex: +2259999999999)">
+        <source>Your telephone number preceded by your country code and without spaces (ex: +2259999999999)</source>
+        <target>Votre numéro de téléphone précédé de l'indicatif pays et sans espace (ex: +2259999999999)</target>
+      </trans-unit>
+      <trans-unit id="1mP0n9D" resname="Register Please">
+        <source>Register Please</source>
+        <target>Enregistrez-vous SVP</target>
+      </trans-unit>
+      <trans-unit id="m9DKxU3" resname="SNVLT - Register">
+        <source>SNVLT - Register</source>
+        <target>SNVLT - Inscription</target>
+      </trans-unit>
+      <trans-unit id="faUUCbN" resname="SNVLT - Register Please">
+        <source>SNVLT - Register Please</source>
+        <target>SNVLT - Enregistrez-vous SVP</target>
+      </trans-unit>
+      <trans-unit id="U28cTzJ" resname="Password Reset Email Sent">
+        <source>Password Reset Email Sent</source>
+        <target>Email de Réinitialisation du mot de passe envoyé</target>
+      </trans-unit>
+      <trans-unit id="WfpDeb4" resname="Reset your password">
+        <source>Reset your password</source>
+        <target>Réinitialiser votre mot de passe</target>
+      </trans-unit>
+      <trans-unit id="FmrMHS6" resname="If an account matching your email exists, then an email was just sent that contains a link that you can use to reset your password.">
+        <source>If an account matching your email exists, then an email was just sent that contains a link that you can use to reset your password.</source>
+        <target>Si votre adresse mail est existante,Vous recevrez un email contenant un lien de réinitialisation de votre mot de passe.</target>
+      </trans-unit>
+      <trans-unit id="bs9avOq" resname="If you don't receive an email please check your spam folder or">
+        <source>If you don't receive an email please check your spam folder or</source>
+        <target>Si vous ne recevez pas de mail, vérifier vos couriers indésirables ou</target>
+      </trans-unit>
+      <trans-unit id="W13t7jL" resname="try again">
+        <source>try again</source>
+        <target>Essayer encore</target>
+      </trans-unit>
+      <trans-unit id="9Zj.apR" resname="Go to Login Form">
+        <source>Go to Login Form</source>
+        <target>Retourner à la page de connexion</target>
+      </trans-unit>
+      <trans-unit id="vQH5j0c" resname="To reset your password, please visit the following link">
+        <source>To reset your password, please visit the following link</source>
+        <target>Afin de réinitialiser votre mot de passe, veuillez cliquez sur ce lien</target>
+      </trans-unit>
+      <trans-unit id="Sk8.WG2" resname="Enter your email address, and we will send you a&#10;        link to reset your password.">
+        <source>Enter your email address, and we will send you a
+        link to reset your password.</source>
+        <target>Entrez SVP votre adresse mail afin de recevoir un lien de réinitialisation de votre mot de passe.</target>
+      </trans-unit>
+      <trans-unit id="y2XxXvP" resname="Send password reset email">
+        <source>Send password reset email</source>
+        <target>Envoyer l'email de réinitialisation du mot de passe</target>
+      </trans-unit>
+      <trans-unit id="4O3_s6c" resname="Reset password">
+        <source>Reset password</source>
+        <target>Réinitialialiser le mot de passe</target>
+      </trans-unit>
+      <trans-unit id="YdaVBBA" resname="Connexion">
+        <source>Connexion</source>
+        <target>Connexion</target>
+      </trans-unit>
+      <trans-unit id="Pb4nMjj" resname="Republic of">
+        <source>Republic of</source>
+        <target>République de</target>
+      </trans-unit>
+      <trans-unit id="lf.FHdk" resname="Côte d'Ivoire">
+        <source>Côte d'Ivoire</source>
+        <target>Côte d'Ivoire</target>
+      </trans-unit>
+      <trans-unit id="NXYbfuS" resname="Sign in PLease!">
+        <source>Sign in PLease!</source>
+        <target>Connectez-vous SVP!</target>
+      </trans-unit>
+      <trans-unit id="P6fF7xk" resname="Your email address">
+        <source>Your email address</source>
+        <target>Votre adresse mail</target>
+      </trans-unit>
+      <trans-unit id="u9pwK0s" resname="Your password">
+        <source>Your password</source>
+        <target>Votre mot de passe</target>
+      </trans-unit>
+      <trans-unit id="_TJnqhH" resname="Remember me">
+        <source>Remember me</source>
+        <target>Se souvenir de moi</target>
+      </trans-unit>
+      <trans-unit id="v9QCsvb" resname="Sign in">
+        <source>Sign in</source>
+        <target>Connexion</target>
+      </trans-unit>
+      <trans-unit id="YOlNDxu" resname="I forgot my password">
+        <source>I forgot my password</source>
+        <target>J'ai oublié mon mot de passe</target>
+      </trans-unit>
+      <trans-unit id="owqvUvv" resname="I am a new member">
+        <source>I am a new member</source>
+        <target>Je suis nouveau</target>
+      </trans-unit>
+      <trans-unit id="kJoKNqj" resname="Change Language">
+        <source>Change Language</source>
+        <target>Changer la langue</target>
+      </trans-unit>
+      <trans-unit id="mRv6AVU" resname="My Profile">
+        <source>My Profile</source>
+        <target>Mon Profil</target>
+      </trans-unit>
+      <trans-unit id="_Dw4_iO" resname="Change my password">
+        <source>Change my password</source>
+        <target>Changer mot de passe</target>
+      </trans-unit>
+      <trans-unit id="0FJ_Sz1" resname="Logout">
+        <source>Logout</source>
+        <target>Déconnexion</target>
+      </trans-unit>
+      <trans-unit id="lINeovz" resname="Inbox">
+        <source>Inbox</source>
+        <target>Boîte de Réception</target>
+      </trans-unit>
+      <trans-unit id="dKiDoDe" resname="Settings">
+        <source>Settings</source>
+        <target>Paramètres</target>
+      </trans-unit>
+      <trans-unit id="1X1ItxA" resname="Log Out">
+        <source>Log Out</source>
+        <target>Déconnexion</target>
+      </trans-unit>
+      <trans-unit id="BNe0gzk" resname="Messages">
+        <source>Messages</source>
+        <target>Messages</target>
+      </trans-unit>
+      <trans-unit id="umN3XZZ" resname="sent to you on">
+        <source>sent to you on</source>
+        <target>envyé le</target>
+      </trans-unit>
+      <trans-unit id="yL00_OC" resname="Operator Type">
+        <source>Operator Type</source>
+        <target>Type Operateur</target>
+      </trans-unit>
+      <trans-unit id="NA9GMDP" resname="Code">
+        <source>Code</source>
+        <target>Code</target>
+      </trans-unit>
+      <trans-unit id="LzFs.7V" resname="Cantonnement">
+        <source>Cantonnement</source>
+        <target>Cantonnement</target>
+      </trans-unit>
+      <trans-unit id="aUDR_vn" resname="Document Name">
+        <source>Document Name</source>
+        <target>Document</target>
+      </trans-unit>
+      <trans-unit id=".qdfTRy" resname="Delivery date">
+        <source>Delivery date</source>
+        <target>Date de Délivrance</target>
+      </trans-unit>
+      <trans-unit id="4cttMPo" resname="Due date">
+        <source>Due date</source>
+        <target>Date Expiration</target>
+      </trans-unit>
+      <trans-unit id="r2FbgGv" resname="download file">
+        <source>download file</source>
+        <target>Télécharger le fichier</target>
+      </trans-unit>
+      <trans-unit id="m1DWjGm" resname="Refuse document">
+        <source>Refuse document</source>
+        <target>Refuser le document</target>
+      </trans-unit>
+      <trans-unit id="DdNA0Ax" resname="Accept document">
+        <source>Accept document</source>
+        <target>Accepter le document</target>
+      </trans-unit>
+      <trans-unit id="ddpcJCc" resname="Administrator Groups">
+        <source>Administrator Groups</source>
+        <target>Groupes de l'Administrator</target>
+      </trans-unit>
+      <trans-unit id="52w44bi" resname="Number of users">
+        <source>Number of users</source>
+        <target>Nombre d'utilisateurs</target>
+      </trans-unit>
+      <trans-unit id="vTIbsTC" resname="Manage Document Stock">
+        <source>Manage Document Stock</source>
+        <target>Mouvementer le stock de documents</target>
+      </trans-unit>
+      <trans-unit id="RkxP.QG" resname="Edit">
+        <source>Edit</source>
+        <target>Modifier</target>
+      </trans-unit>
+      <trans-unit id="A2mTZ9H" resname="Select Regional Direction...">
+        <source>Select Regional Direction...</source>
+        <target>Sélectuionnez la Direction Régionale...</target>
+      </trans-unit>
+      <trans-unit id="TjTTNWQ" resname="Manage Stock">
+        <source>Manage Stock</source>
+        <target>Gérer le stock</target>
+      </trans-unit>
+      <trans-unit id="eKKckCX" resname="Type of movement">
+        <source>Type of movement</source>
+        <target>Type de mouvement</target>
+      </trans-unit>
+      <trans-unit id="eAaFuvt" resname="Date of mouvement">
+        <source>Date of mouvement</source>
+        <target>Date Mouvement</target>
+      </trans-unit>
+      <trans-unit id="mg.uOHR" resname="Generated by">
+        <source>Generated by</source>
+        <target>Généré par</target>
+      </trans-unit>
+      <trans-unit id="kLbJeoW" resname="Document No">
+        <source>Document No</source>
+        <target>N° Document</target>
+      </trans-unit>
+      <trans-unit id="dQr3eqQ" resname="In use">
+        <source>In use</source>
+        <target>Attribué</target>
+      </trans-unit>
+      <trans-unit id="mxa0TQ4" resname="documents">
+        <source>documents</source>
+        <target>documents</target>
+      </trans-unit>
+      <trans-unit id="Q2QHjdm" resname="Structure Manager">
+        <source>Structure Manager</source>
+        <target>Responsable Structure</target>
+      </trans-unit>
+      <trans-unit id="uzPm79P" resname="Add a manager">
+        <source>Add a manager</source>
+        <target>Ajouter un responsable</target>
+      </trans-unit>
+      <trans-unit id="PRaRDal" resname="Add Manager">
+        <source>Add Manager</source>
+        <target>Ajouter un responsable</target>
+      </trans-unit>
+      <trans-unit id="Pp9w7A0" resname="You are">
+        <source>You are</source>
+        <target>Vous êtes</target>
+      </trans-unit>
+      <trans-unit id="6LVv6T0" resname="Logger">
+        <source>Logger</source>
+        <target>Exploitant forestier</target>
+      </trans-unit>
+      <trans-unit id="tESEoPo" resname="Industry">
+        <source>Industry</source>
+        <target>Industrie</target>
+      </trans-unit>
+      <trans-unit id="wMwf6P8" resname="Exporter">
+        <source>Exporter</source>
+        <target>Exportateur</target>
+      </trans-unit>
+      <trans-unit id="kMfdlKW" resname="Regional Direction">
+        <source>Regional Direction</source>
+        <target>Direction Régionale</target>
+      </trans-unit>
+      <trans-unit id="5JhXvsI" resname="Forest Cantonment">
+        <source>Forest Cantonment</source>
+        <target>Cantonnement Forestier</target>
+      </trans-unit>
+      <trans-unit id="EIbjztp" resname="Departemental Direction">
+        <source>Departemental Direction</source>
+        <target>Direction Départementale</target>
+      </trans-unit>
+      <trans-unit id="X.sUvVA" resname="Checking Point">
+        <source>Checking Point</source>
+        <target>Poste Forestier</target>
+      </trans-unit>
+      <trans-unit id="awzJBNC" resname="Users">
+        <source>Users</source>
+        <target>Utilisateurs</target>
+      </trans-unit>
+      <trans-unit id="dtUzGcZ" resname="Is manager">
+        <source>Is manager</source>
+        <target>Est Responsable</target>
+      </trans-unit>
+      <trans-unit id="g3X6qYd" resname="Is locked">
+        <source>Is locked</source>
+        <target>Est Bloqué</target>
+      </trans-unit>
+      <trans-unit id="tFBkXev" resname="Contacts">
+        <source>Contacts</source>
+        <target>Contacts</target>
+      </trans-unit>
+      <trans-unit id="gFOBJ8G" resname="Type of Operator">
+        <source>Type of Operator</source>
+        <target>Type Opérateur</target>
+      </trans-unit>
+      <trans-unit id="cgPCs9r" resname="Structure">
+        <source>Structure</source>
+        <target>Structure</target>
+      </trans-unit>
+      <trans-unit id="uxsB7Sq" resname="This user is blocked into the system">
+        <source>This user is blocked into the system</source>
+        <target>Cet utilisateur est bloqué dans le système</target>
+      </trans-unit>
+      <trans-unit id="J65ifU6" resname="Send an email">
+        <source>Send an email</source>
+        <target>Envoyer un email</target>
+      </trans-unit>
+      <trans-unit id="LWwlnqf" resname="Do you want to lock this user ?">
+        <source>Do you want to lock this user ?</source>
+        <target>Voulez-vous bloquer cet utilisateur ?</target>
+      </trans-unit>
+      <trans-unit id="TmUKrj_" resname="Yes, lock">
+        <source>Yes, lock</source>
+        <target>Oui, bloquer</target>
+      </trans-unit>
+      <trans-unit id="h6qexei" resname="locked!">
+        <source>locked!</source>
+        <target>bloqué!</target>
+      </trans-unit>
+      <trans-unit id="Cm5PYJQ" resname="The user is now blocked">
+        <source>The user is now blocked</source>
+        <target>L'utilisateur est maintenant bloqué</target>
+      </trans-unit>
+      <trans-unit id="yIoLkHQ" resname="Success">
+        <source>Success</source>
+        <target>Succès</target>
+      </trans-unit>
+      <trans-unit id="swdFH.O" resname="Do you want to unlock this user ?">
+        <source>Do you want to unlock this user ?</source>
+        <target>Voulez-vous débloquer l'utilisateur ?</target>
+      </trans-unit>
+      <trans-unit id="wXeWwr7" resname="Yes, Unlock">
+        <source>Yes, Unlock</source>
+        <target>Oui, Débloquer</target>
+      </trans-unit>
+      <trans-unit id="LLSA5p2" resname="Unlocked!">
+        <source>Unlocked!</source>
+        <target>Débloqué!</target>
+      </trans-unit>
+      <trans-unit id="KBg1VQs" resname="The user is now active">
+        <source>The user is now active</source>
+        <target>L'utilisateur est maintenant actif</target>
+      </trans-unit>
+      <trans-unit id="lAHLzQd" resname="Loggers Data">
+        <source>Loggers Data</source>
+        <target>Données forestières</target>
+      </trans-unit>
+      <trans-unit id="F6l8qj." resname="IN USE">
+        <source>IN USE</source>
+        <target>ATTRIBUE</target>
+      </trans-unit>
+      <trans-unit id="kfaFPmQ" resname="WITHDROWN">
+        <source>WITHDROWN</source>
+        <target>RETIRE</target>
+      </trans-unit>
+      <trans-unit id="ILrMB.j" resname="Account Validation">
+        <source>Account Validation</source>
+        <target>Validation Compte</target>
+      </trans-unit>
+      <trans-unit id="ruCakNh" resname="Please, Validate your registration by following the link sent to you in your mailbox">
+        <source>Please, Validate your registration by following the link sent to you in your mailbox</source>
+        <target>SVP, Veuillez valider votre enregistrement en suivant le lien envoyé dans votre boîte mail</target>
+      </trans-unit>
+      <trans-unit id="hgKWRG7" resname="I understand">
+        <source>I understand</source>
+        <target>J'ai compris</target>
+      </trans-unit>
+      <trans-unit id="bZ9wAdu" resname="Document Authentication">
+        <source>Document Authentication</source>
+        <target>Authentification du document</target>
+      </trans-unit>
+      <trans-unit id="g1qhcWc" resname="Verifying Document Authenticity">
+        <source>Verifying Document Authenticity</source>
+        <target>Vérification de l'Authenticité du document</target>
+      </trans-unit>
+      <trans-unit id="u0e4.19" resname="Thanks">
+        <source>Thanks</source>
+        <target>Merci</target>
+      </trans-unit>
+      <trans-unit id="zwslI5I" resname="MINISTRY_NAME">
+        <source>MINISTRY_NAME</source>
+        <target>Ministère des Eaux et Forêts</target>
+      </trans-unit>
+      <trans-unit id="icJd3fW" resname="COUNTRY_NAME">
+        <source>COUNTRY_NAME</source>
+        <target>République de Côte d'Ivoire</target>
+      </trans-unit>
+      <trans-unit id="6NfrtzL" resname="WEBSITE">
+        <source>WEBSITE</source>
+        <target>www.boislegal.ci</target>
+      </trans-unit>
+      <trans-unit id="LymSJyi" resname="! Success">
+        <source>! Success</source>
+        <target>! Succès</target>
+      </trans-unit>
+      <trans-unit id="3AC4KNi" resname="This document is authorized in the system">
+        <source>This document is authorized in the system</source>
+        <target>Ce document est autorisé dans le système</target>
+      </trans-unit>
+      <trans-unit id="DiImtSN" resname="Welcome">
+        <source>Welcome</source>
+        <target>Bienvenue</target>
+      </trans-unit>
+      <trans-unit id="sS7vH_D" resname="Copyright ©">
+        <source>Copyright ©</source>
+        <target>Copyright ©</target>
+      </trans-unit>
+      <trans-unit id="lA26WNG" resname="YEAR">
+        <source>YEAR</source>
+        <target>2023</target>
+      </trans-unit>
+      <trans-unit id="ONsUOYI" resname="DEVELOPER">
+        <source>DEVELOPER</source>
+        <target>SYSTEM 2IS</target>
+      </trans-unit>
+      <trans-unit id="f1U4Ihn" resname="Search...">
+        <source>Search...</source>
+        <target>Rechercher...</target>
+      </trans-unit>
+      <trans-unit id="fftM9nd" resname="users">
+        <source>users</source>
+        <target>utilisateurs</target>
+      </trans-unit>
+      <trans-unit id="iyCF903" resname="Manager">
+        <source>Manager</source>
+        <target>Responsable</target>
+      </trans-unit>
+      <trans-unit id="LtSxZH5" resname="Manager email">
+        <source>Manager email</source>
+        <target>email du responsable</target>
+      </trans-unit>
+      <trans-unit id="cfMIocf" resname="Acronym">
+        <source>Acronym</source>
+        <target>Sigle</target>
+      </trans-unit>
+      <trans-unit id="vVeyzaY" resname="Manager Phone">
+        <source>Manager Phone</source>
+        <target>Téléphone Mobile du responsable</target>
+      </trans-unit>
+      <trans-unit id="EFQlbzm" resname="Number of agents">
+        <source>Number of agents</source>
+        <target>Nombre d'agents</target>
+      </trans-unit>
+      <trans-unit id="c8J8gdO" resname="Sign in to continue.">
+        <source>Sign in to continue.</source>
+        <target>Connectez-vous pour continuer.</target>
+      </trans-unit>
+      <trans-unit id="dWBqAOK" resname="SIGN IN">
+        <source>SIGN IN</source>
+        <target>CONNEXION</target>
+      </trans-unit>
+      <trans-unit id="2zQH6Zk" resname="Keep me signed in">
+        <source>Keep me signed in</source>
+        <target>Se souvenir de moi</target>
+      </trans-unit>
+      <trans-unit id="MMHY0_k" resname="Forgot password?">
+        <source>Forgot password?</source>
+        <target>Mot de passe oublié?</target>
+      </trans-unit>
+      <trans-unit id="G1RbI.r" resname="Don't have an account?">
+        <source>Don't have an account?</source>
+        <target>Je n'ai pas de compte?</target>
+      </trans-unit>
+      <trans-unit id="b6OtMKV" resname="Ask for an access">
+        <source>Ask for an access</source>
+        <target>Demander un accès</target>
+      </trans-unit>
+      <trans-unit id=".92Z7NN" resname="Cantonment name">
+        <source>Cantonment name</source>
+        <target>Dénomination du cantonnement</target>
+      </trans-unit>
+      <trans-unit id="IngIrUJ" resname="Cantonment name is mandatory">
+        <source>Cantonment name is mandatory</source>
+        <target>Le cantonnement est obligatoire</target>
+      </trans-unit>
+      <trans-unit id="31rbaJb" resname="Cantonment manager">
+        <source>Cantonment manager</source>
+        <target>Responsable Cantonnement</target>
+      </trans-unit>
+      <trans-unit id="pVWTKfO" resname="Cantonment manager email">
+        <source>Cantonment manager email</source>
+        <target>Email du responsable Cantonnement</target>
+      </trans-unit>
+      <trans-unit id="SRjcf.6" resname="Cantonment manager phone">
+        <source>Cantonment manager phone</source>
+        <target>Téléphone du responsable Cantonnement</target>
+      </trans-unit>
+      <trans-unit id="7SDkHGf" resname="Select Departmental Direction">
+        <source>Select Departmental Direction</source>
+        <target>Sélectionnez la Direction Départementale</target>
+      </trans-unit>
+      <trans-unit id="wEsXBWz" resname="Select Departmental Direction...">
+        <source>Select Departmental Direction...</source>
+        <target>Sélectionnez la Direction Départementale...</target>
+      </trans-unit>
+      <trans-unit id="1VXIAVk" resname="Regional Direction is madatory">
+        <source>Regional Direction is madatory</source>
+        <target>La Direction régionale est obligatoire</target>
+      </trans-unit>
+      <trans-unit id="HyC_3TA" resname="Direction Acronym">
+        <source>Direction Acronym</source>
+        <target>Sigle de la Direction</target>
+      </trans-unit>
+      <trans-unit id="ngAx_tm" resname="Direction Name">
+        <source>Direction Name</source>
+        <target>Direction</target>
+      </trans-unit>
+      <trans-unit id="KYQm5fE" resname="The direction name is mandatory">
+        <source>The direction name is mandatory</source>
+        <target>Le nom de la Direction est obligatoire</target>
+      </trans-unit>
+      <trans-unit id="56XTxX0" resname="RD Name">
+        <source>RD Name</source>
+        <target>Dénomination de la DR</target>
+      </trans-unit>
+      <trans-unit id="WPwcuMz" resname="RD Name is mandatory">
+        <source>RD Name is mandatory</source>
+        <target>La dénomination de la DR est obligatoire</target>
+      </trans-unit>
+      <trans-unit id="YA3rxLz" resname="[ADD]">
+        <source>[ADD]</source>
+        <target>[AJOUT]</target>
+      </trans-unit>
+      <trans-unit id="FrS2yap" resname="Ministry Directions">
+        <source>Ministry Directions</source>
+        <target>Directions MINEF</target>
+      </trans-unit>
+      <trans-unit id="YE3ORF4" resname="Services">
+        <source>Services</source>
+        <target>Services</target>
+      </trans-unit>
+      <trans-unit id="JkDijsG" resname="Number of services">
+        <source>Number of services</source>
+        <target>Nombre de services</target>
+      </trans-unit>
+      <trans-unit id="uA.om0p" resname="Regional Directions">
+        <source>Regional Directions</source>
+        <target>Directions Régionales</target>
+      </trans-unit>
+      <trans-unit id="QMMKKIF" resname="DR">
+        <source>DR</source>
+        <target>DR</target>
+      </trans-unit>
+      <trans-unit id="vtot1Fy" resname="Cantonments for this Regional Direction">
+        <source>Cantonments for this Regional Direction</source>
+        <target>Liste des cantonnements pour cette Direction Régionale</target>
+      </trans-unit>
+      <trans-unit id="LjN8i3o" resname="Forest Control Posts">
+        <source>Forest Control Posts</source>
+        <target>Poste de Contrôle Forestier</target>
+      </trans-unit>
+      <trans-unit id="JubWQsD" resname="Number of DD">
+        <source>Number of DD</source>
+        <target>Nombre de DD</target>
+      </trans-unit>
+      <trans-unit id="pLqvBvi" resname="Number of Cantonments">
+        <source>Number of Cantonments</source>
+        <target>Nombre de Cantonnements</target>
+      </trans-unit>
+      <trans-unit id="tLUx15a" resname="Add Ministry Service">
+        <source>Add Ministry Service</source>
+        <target>Ajouter un service MINEF</target>
+      </trans-unit>
+      <trans-unit id="fPuiKIm" resname="Edit Ministry Service">
+        <source>Edit Ministry Service</source>
+        <target>Modifier un service MINEF</target>
+      </trans-unit>
+      <trans-unit id="jEXtGWQ" resname="The attribution has been updated successfully">
+        <source>The attribution has been updated successfully</source>
+        <target>L'attribution a été modifié avec succès</target>
+      </trans-unit>
+      <trans-unit id="nXS.BkS" resname="DD Name">
+        <source>DD Name</source>
+        <target>Dénomination de la DD</target>
+      </trans-unit>
+      <trans-unit id="pShKFtR" resname="DD Name is mandatory">
+        <source>DD Name is mandatory</source>
+        <target>La DD est obligatoire</target>
+      </trans-unit>
+      <trans-unit id="TM1SRQ0" resname="Checking Data">
+        <source>Checking Data</source>
+        <target>Vérification des données</target>
+      </trans-unit>
+      <trans-unit id="FAD0TMx" resname="This place is where you can check documents and data before authorizing attribution">
+        <source>This place is where you can check documents and data before authorizing attribution</source>
+        <target>Cet espace est réservé à la vérification des documents de légalité avant une possible attribution de PEF</target>
+      </trans-unit>
+      <trans-unit id="UXsfJ5J" resname="Document for this operator">
+        <source>Document for this operator</source>
+        <target>Documentation de cet opérateur</target>
+      </trans-unit>
+      <trans-unit id="nF3EsEm" resname="Data for this forest">
+        <source>Data for this forest</source>
+        <target>Données concernant le titre forestier</target>
+      </trans-unit>
+      <trans-unit id="ly5fm9s" resname="code_gl">
+        <source>code_gl</source>
+        <target>code gl</target>
+      </trans-unit>
+      <trans-unit id="hW6BulK" resname="Departmental Directions">
+        <source>Departmental Directions</source>
+        <target>Directions Départementales</target>
+      </trans-unit>
+      <trans-unit id="ISE23nK" resname="forests">
+        <source>forests</source>
+        <target>forêts</target>
+      </trans-unit>
+      <trans-unit id="Dro9TuQ" resname="Owned by">
+        <source>Owned by</source>
+        <target>Attribué à</target>
+      </trans-unit>
+      <trans-unit id="ugMUTqQ" resname="Not in activity">
+        <source>Not in activity</source>
+        <target>Pas en activité</target>
+      </trans-unit>
+      <trans-unit id="Pg1Wa.x" resname="National System for Verification of wood Tracking and Legacy">
+        <source>National System for Verification of wood Tracking and Legacy</source>
+        <target>Système National de Vérification de la Légalité et la Traçabilité du bois</target>
+      </trans-unit>
+      <trans-unit id="DEQqoCg" resname="Decision number is mandatory">
+        <source>Decision number is mandatory</source>
+        <target>Le numéro de la décision est obligatoire</target>
+      </trans-unit>
+      <trans-unit id="NWYKZp." resname="Decision date is mandatory">
+        <source>Decision date is mandatory</source>
+        <target>La date de décision est obligatoire</target>
+      </trans-unit>
+      <trans-unit id="IJwcEkN" resname="Add a Manager">
+        <source>Add a Manager</source>
+        <target>Ajouter un Responsable</target>
+      </trans-unit>
+      <trans-unit id="RTdwJxH" resname="All Managers">
+        <source>All Managers</source>
+        <target>Tous les Responsables</target>
+      </trans-unit>
+      <trans-unit id="FNU2nL7" resname="The option to verify documents for the allocation of forest perimeters has been disabled by the system administrator">
+        <source>The option to verify documents for the allocation of forest perimeters has been disabled by the system administrator</source>
+        <target>L'option de vérification des documents pour l'attribution de périmètres forestier a été désactivée par l'administrateur système</target>
+      </trans-unit>
+      <trans-unit id="zQFC.L7" resname="Add an Authorisation">
+        <source>Add an Authorisation</source>
+        <target>Ajouter une Autorisation</target>
+      </trans-unit>
+      <trans-unit id="CPaFm9U" resname="Edit an authorization">
+        <source>Edit an authorization</source>
+        <target>Modifier une Autorisation</target>
+      </trans-unit>
+      <trans-unit id="l4UXksp" resname="Add authorization">
+        <source>Add authorization</source>
+        <target>Ajouter une Autorisation</target>
+      </trans-unit>
+      <trans-unit id="sH6r.mp" resname="The resumption of annual activities has been successfully updated">
+        <source>The resumption of annual activities has been successfully updated</source>
+        <target>La reprise d'activités annuelle a été mise à jour avec succès</target>
+      </trans-unit>
+      <trans-unit id="Y.95UhV" resname="  manager ">
+        <source>  manager </source>
+        <target>  responsable </target>
+      </trans-unit>
+      <trans-unit id="VbXFH4Z" resname="lastname">
+        <source>lastname</source>
+        <target>nom</target>
+      </trans-unit>
+      <trans-unit id="3LPJYkF" resname="Please, type your lastname">
+        <source>Please, type your lastname</source>
+        <target>SVP, inscrivez votre nom</target>
+      </trans-unit>
+      <trans-unit id="6G60liM" resname="Your lastname must have at least ">
+        <source>Your lastname must have at least </source>
+        <target>Votre nom doit contenir au moins </target>
+      </trans-unit>
+      <trans-unit id="TP3eab3" resname="firstname">
+        <source>firstname</source>
+        <target>prénom</target>
+      </trans-unit>
+      <trans-unit id=".KRP0A7" resname="Please, type your firstname">
+        <source>Please, type your firstname</source>
+        <target>SVP, inscrivez votre prénom</target>
+      </trans-unit>
+      <trans-unit id="tP._d5M" resname="Your firstname must have at least ">
+        <source>Your firstname must have at least </source>
+        <target>Votre prénom doit contenir au moins </target>
+      </trans-unit>
+      <trans-unit id="giREF.l" resname="email">
+        <source>email</source>
+        <target>email</target>
+      </trans-unit>
+      <trans-unit id="BOk0y_L" resname="Please, type your email">
+        <source>Please, type your email</source>
+        <target>SVP, inscrivez votre email</target>
+      </trans-unit>
+      <trans-unit id="xMVe9I7" resname="Please, upload an image with size less than 1 Mb">
+        <source>Please, upload an image with size less than 1 Mb</source>
+        <target>SVP, charger une image de taille inférieure à 1 Mo</target>
+      </trans-unit>
+      <trans-unit id="x7U1N46" resname="Please, upload a valid image">
+        <source>Please, upload a valid image</source>
+        <target>SVP, veuillez charger une image valide</target>
+      </trans-unit>
+      <trans-unit id="wzn7dwa" resname="mobile phone">
+        <source>mobile phone</source>
+        <target>Numéro de téléphone mobile</target>
+      </trans-unit>
+      <trans-unit id="n.YYFB3" resname="Please, type your mobile phone">
+        <source>Please, type your mobile phone</source>
+        <target>SVP, Renseignez votre numéro de téléphone mobile</target>
+      </trans-unit>
+      <trans-unit id="n0pGan_" resname="Your mobile phone must have at least ">
+        <source>Your mobile phone must have at least </source>
+        <target>Votre numéro de téléphone mobile doit contenir au moins </target>
+      </trans-unit>
+      <trans-unit id="8oXUtpZ" resname="Your mobile phone must not have more than ">
+        <source>Your mobile phone must not have more than </source>
+        <target>Votre numéro de téléphone mobile doit être d'au plus </target>
+      </trans-unit>
+      <trans-unit id="ONLnDzJ" resname="Authorization number is mandatory">
+        <source>Authorization number is mandatory</source>
+        <target>Le numéro de l'autorisation est obligatoire</target>
+      </trans-unit>
+      <trans-unit id="SVC6jOn" resname="Authorization date is mandatory">
+        <source>Authorization date is mandatory</source>
+        <target>La date de l'autorisation est obligatoire</target>
+      </trans-unit>
+      <trans-unit id="ZKJELl9" resname="Forest Prospection">
+        <source>Forest Prospection</source>
+        <target>Inventaire forestier</target>
+      </trans-unit>
+      <trans-unit id="Myt0AT." resname="Download template">
+        <source>Download template</source>
+        <target>Télécharger le modèle</target>
+      </trans-unit>
+      <trans-unit id="FFJGV2C" resname="Upload Prospection Data">
+        <source>Upload Prospection Data</source>
+        <target>Charger les données de prospection forestière</target>
+      </trans-unit>
+      <trans-unit id="v7ErGWd" resname="Display and upload data">
+        <source>Display and upload data</source>
+        <target>Afficher et Charger les données</target>
+      </trans-unit>
+      <trans-unit id="ufuwXmP" resname="My allocations">
+        <source>My allocations</source>
+        <target>Mes attributions</target>
+      </trans-unit>
+      <trans-unit id="GzXPugQ" resname="Forest species">
+        <source>Forest species</source>
+        <target>Essence forestière</target>
+      </trans-unit>
+      <trans-unit id="qKBuSla" resname="Zone">
+        <source>Zone</source>
+        <target>Zone</target>
+      </trans-unit>
+      <trans-unit id="S2irOEf" resname="X">
+        <source>X</source>
+        <target>X</target>
+      </trans-unit>
+      <trans-unit id="GPU4TVi" resname="Y">
+        <source>Y</source>
+        <target>Y</target>
+      </trans-unit>
+      <trans-unit id="ct.PsMR" resname="Length">
+        <source>Length</source>
+        <target>Longueur</target>
+      </trans-unit>
+      <trans-unit id="GKw_c0P" resname="Diameter">
+        <source>Diameter</source>
+        <target>Diamètre</target>
+      </trans-unit>
+      <trans-unit id="sQ_5Ztc" resname="Volume">
+        <source>Volume</source>
+        <target>Volume</target>
+      </trans-unit>
+      <trans-unit id="2u52BrM" resname="Reset">
+        <source>Reset</source>
+        <target>Réinitialiser</target>
+      </trans-unit>
+      <trans-unit id="SFejwDR" resname="Allowed JPG, GIF or PNG. Max size of 1024K">
+        <source>Allowed JPG, GIF or PNG. Max size of 1024K</source>
+        <target>Format autorisés JPG, GIF or PNG. Taile maximale : 1024 Ko</target>
+      </trans-unit>
+      <trans-unit id="duxkTvU" resname="Forest Allocation">
+        <source>Forest Allocation</source>
+        <target>Attribution de Forêts</target>
+      </trans-unit>
+      <trans-unit id="DMBpuFe" resname="This logger can apply for this forest allocation">
+        <source>This logger can apply for this forest allocation</source>
+        <target>Ce forestier peut obtenir une attribution</target>
+      </trans-unit>
+      <trans-unit id="F5bP.m9" resname="This logger cannot  apply for this forest allocation">
+        <source>This logger cannot  apply for this forest allocation</source>
+        <target>Ce forestier ne réunit pas les conditions pour obtenir une quelconque attribution pour cette forêt</target>
+      </trans-unit>
+      <trans-unit id="j_GBkhw" resname="Annual Renewal Authorization">
+        <source>Annual Renewal Authorization</source>
+        <target>Reprise d'activités annuelles</target>
+      </trans-unit>
+      <trans-unit id="1VV18lu" resname="Wood Factories">
+        <source>Wood Factories</source>
+        <target>Unités de Transformation du bois</target>
+      </trans-unit>
+      <trans-unit id="u0PayBx" resname="Add Factory">
+        <source>Add Factory</source>
+        <target>Ajouter une Usine</target>
+      </trans-unit>
+      <trans-unit id="FZY.EBs" resname="Edit Factory">
+        <source>Edit Factory</source>
+        <target>Editer l'Usine</target>
+      </trans-unit>
+      <trans-unit id="7H6wmhK" resname="Transformation Type">
+        <source>Transformation Type</source>
+        <target>Type de Transformation</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

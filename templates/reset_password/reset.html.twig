@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('assets/login/style_login.css') }}">
+
+    <!-- Bootstrap5 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+    <title>SNVLT - {% trans %} Reset your password {% endtrans %}</title>
+</head>
+<body class="d-flex text-center" style="background-image: url('{{ asset('assets/images/fond_login.jpg') }}'); background-size: cover; background-repeat: repeat;">
+{{ form_start(resetForm, {'attr': {'class': 'form-login'}}) }}
+
+
+    <img src="{{ asset('assets/images/logo_snvlt.png') }}" height="120" alt="SNVLT">
+
+    <h1 class="h3 mb-3 font-weight-normal">{% trans %}Reset your password{% endtrans %}</h1>
+    <!-- 'sr-only' will hide the text : 'Email Address'. So, 'Email Address' will be invisible -->
+
+    {#<label for="inputEmail">Email</label>#}
+
+    {{ form_row(resetForm.plainPassword, {'attr':{'class': 'form-control mb-3', 'placeholder':'mot de passe'}}) }}
+    <button class="btn btn-primary">{% trans %}Reset password{% endtrans %}</button>
+
+{{ form_end(resetForm) }}
+
+<!-- Optional JavaScript -->
+<!-- Popper.js first, then Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</body>
+</html>

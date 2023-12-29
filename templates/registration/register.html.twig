@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="{{ asset('assets/login/style_login.css') }}">
+
+        <!-- Bootstrap5 CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+        <link href="{{ asset('assets/select2/select2.min.css') }}" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+
+
+    <title> {% trans %} Register Please{% endtrans %}</title>
+</head>
+<body class="d-flex text-center" style="background-image: url('{{ asset('assets/images/fond_login.jpg') }}'); background-size: cover; background-repeat: no-repeat;">
+
+
+        {{ form_errors(registrationForm) }}
+
+        {{ form_start(registrationForm, {'attr' : {'class' : 'form-login mx-auto w-100'}}) }}
+
+        <img src="{{ asset('assets/images/logo_snvlt.png') }}" height="190" alt="SNVLT">
+
+        <h3 class="h3 mb-3 font-weight-normal text-center">{% trans %} Register Please{% endtrans %}</h3>
+
+        <div class="input-group mb-2">
+                {{ form_row(registrationForm.nom_utilisateur, {'attr' : {'class' : 'form-control'}}) }}
+        </div>
+        <div class="input-group mb-2">
+            {{ form_row(registrationForm.prenoms_utilisateur, {'attr' : {'class' : 'form-control'}}) }}
+        </div>
+
+        <div class="input-group mb-2">
+            {{ form_row(registrationForm.mobile, {'attr' : {'class' : 'form-control'}}) }}
+        </div>
+
+        <div class="input-group mb-2">
+            {{ form_row(registrationForm.email, {'attr' : {'class' : 'form-control'}}) }}
+        </div>
+
+        <div class="input-group mb-2">
+            {{ form_row(registrationForm.plainPassword, {'attr' : {'class' : 'form-control'}}) }}
+        </div>
+
+        <div class="">{{ form_row(registrationForm.code_operateur) }}</div>
+        <div class="codeexploitant"> {{ form_row(registrationForm.codeexploitant) }}</div>
+
+        <div class="row">
+                <div class="code_direction col-md-6">{{ form_row(registrationForm.code_direction) }}</div>
+                <div class="code_service col-md-6">{{ form_row(registrationForm.code_service) }}</div>
+        </div>
+
+        <div class="codeindustriel">{{ form_row(registrationForm.codeindustriel) }}</div>
+        <div class="codeexportateur">{{ form_row(registrationForm.code_exportateur) }}</div>
+
+        <div class="codedr">{{ form_row(registrationForm.code_dr) }}</div>
+        <div class="codecantonnement">{{ form_row(registrationForm.code_cantonnement) }}</div>
+        <div class="d_def"> {{ form_row(registrationForm.code_ddef) }}</div>
+
+        <div class="p_f">{{ form_row(registrationForm.code_poste_controle) }}</div>
+
+        {{ form_rest(registrationForm) }}
+
+        <div class="p-t-20  mb-2">
+            <input type="submit" class="btn btn--radius btn--green" value="Soumettre">
+        </div>
+        {{ form_end(registrationForm) }}
+
+        <!-- Main JS-->
+
+        <script
+                src="https://code.jquery.com/jquery-3.7.1.js"
+                integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+                crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+        <script>
+            const codeexploitant = document.querySelector(".codeexploitant");
+            const codeservice = document.querySelector(".code_service");
+            const codeindustriel = document.querySelector(".codeindustriel");
+            const codedirection = document.querySelector(".code_direction");
+            const codedr = document.querySelector(".codedr");
+            const codecantonnement = document.querySelector(".codecantonnement");
+            const codeddf = document.querySelector(".d_def");
+            const codepc = document.querySelector(".p_f");
+            const codeoperateur = document.querySelector(".codeexploitant");
+            const codeexportateur = document.querySelector(".codeexportateur");
+
+            window.onload = () =>{
+                codeexploitant.style = 'display:none';
+                codeservice.style = 'display:none';
+                codedirection.style = 'display:none';
+                codeindustriel.style = 'display:none';
+                codedr.style = 'display:none';
+                codecantonnement.style = 'display:none';
+                codeddf.style = 'display:none';
+                codepc.style = 'display:none';
+            }
+
+            $(document).ready(function() {
+                    $('.code_groupe').select2({
+                            placeholder: "-- Groupe --",
+                            allowClear: true,
+                            width: '100%'
+                    });
+                    $('.role_user').select2({
+                            placeholder: "--Vous êtes --",
+                            allowClear: true
+                    });
+                    $('.code_exploitant').select2({
+                            placeholder: "-- Exploitants Forestiers --",
+                            width: '100%',
+                            allowClear: true
+                    });
+
+                    $('.code_industriel').select2({
+                            placeholder: "-- Transformateurs du bois --",
+                            allowClear: true
+                    });
+
+                    $('.exportateur').select2({
+                            placeholder: "-- Exportateurs du bois --",
+                            width: '100%',
+                            allowClear: true
+                    });
+
+
+                    $('.code_dr').select2({
+                            placeholder: "-- Directions Régionale -",
+                            allowClear: true
+                    });
+
+                    $('.code_cantonnement').select2({
+                            placeholder: "-- Cantonnements Forestiers --",
+                            allowClear: true
+                    });
+
+                    $('.ddef').select2({
+                            placeholder: '-- Direction départementale --',
+                            allowClear: true
+                    });
+
+                    $('.pf').select2({
+                            placeholder: '-- Poste Forestier --',
+                            allowClear: true,
+                    });
+
+            });
+            $(".role_user").change(function () {
+                var me = this.value;
+
+                codeexploitant.style = 'display:none';
+                codeservice.style = 'display:none';
+                codedirection.style = 'display:none';
+                codeindustriel.style = 'display:none';
+                codedr.style = 'display:none';
+                codecantonnement.style = 'display:none';
+                codeddf.style = 'display:none';
+                codepc.style = 'display:none';
+
+                $('.code_exploitant').val(null).trigger('change');
+                $('.code_industriel').val(null).trigger('change');
+                $('.code_dr').val(null).trigger('change');
+                $('.code_cantonnement').val(null).trigger('change');
+                $('.ddef').val(null).trigger('change');
+                $('.pf').val(null).trigger('change');
+
+                switch(me) {
+                    case "2":
+                        codeexploitant.style = 'display:inline';
+                        $('.code_exploitant').select2('open');
+
+
+                        break;
+                    case "3":
+                        codeindustriel.style = 'display:inline';
+
+                        $('.code_industriel').select2('open');;
+                        break;
+
+                    case "5":
+                        codedr.style = 'display:inline';
+
+                        $('.code_dr').select2('open');;
+                        break;
+
+                    case "7":
+                        codecantonnement.style = 'display:inline';
+
+                        $('.code_cantonnement').select2('open');;
+                        break;
+
+                    case "6":
+                        codeddf.style = 'display:inline';
+
+                        $('.ddef').select2('open');;
+                        break;
+
+                    case "10":
+                        codepc.style = 'display:inline';
+
+                        $('.pf').select2('open');;
+                        break;
+
+
+                    default:
+                    // code block
+                }
+            });
+        </script>
+
+</body>
+</html>

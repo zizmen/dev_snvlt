@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="{{ app.locale }}">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>{% block Title %}{% endblock %}</title>
+
+    <!-- plugins:css -->
+
+    <link rel="stylesheet" href="{{ asset('assets/assets/vendors/mdi/css/materialdesignicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/assets/vendors/flag-icon-css/css/flag-icon.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/assets/vendors/css/vendor.bundle.base.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/assets/css/style.css') }}">
+
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="{{ asset('assets/icons/drapeauci.ico') }}" />
+</head>
+<body>
+<div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    {% if (app.user.codeGroupe.id == 1) %}
+        <nav class="navbar default-layout-navbar bg-success col-lg-12 col-12 p-0 fixed-top d-flex flex-row" style="background-image:linear-gradient(#ae4906, #e37233);">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center" style="background-image:linear-gradient(#ae4906, #e37233);">
+        {% else %}
+            {% if (app.user.codeOperateur.id == 1) %}
+                <nav class="navbar default-layout-navbar bg-success col-lg-12 col-12 p-0 fixed-top d-flex flex-row" style="background-image:linear-gradient(#1869b0, #198089);">
+                <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center" style="background-image:linear-gradient(#1869b0, #198089);">
+
+            {% elseif (app.user.codeOperateur.id == 5 or app.user.codeOperateur.id == 6 or app.user.codeOperateur.id == 7 or app.user.codeOperateur.id == 10) %}
+                    <nav class="navbar default-layout-navbar bg-success col-lg-12 col-12 p-0 fixed-top d-flex flex-row" style="background-image:linear-gradient(#b07118, #897419);">
+                    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center" style="background-image:linear-gradient(#b07118, #897419);">
+           {% else %}
+                    <nav class="navbar default-layout-navbar bg-success col-lg-12 col-12 p-0 fixed-top d-flex flex-row" style="background-image:linear-gradient(#18b018, #198955);">
+                    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center" style="background-image:linear-gradient(#18b018, #198955);">
+            {% endif %}
+        {% endif %}
+
+            <a class="navbar-brand brand-logo" href="#"><img src="{{ asset('assets/images/logo_normal.png') }}" alt="logo" style="height: 64px;width: 85%" /></a>
+            <a class="navbar-brand brand-logo-mini" href="#"><img src="{{ asset('assets/images/minef.png') }}" alt="logo" style="height: 48px;width: 40px;"/></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-stretch">
+            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                <span class="mdi mdi-menu text-white " style="height: 32px; font-size: 32px;"></span>
+            </button>
+            {% set exo = exercice_en_cours.getAnnee %}
+            <span class="text-white my-auto mx-auto" >{{ 'Exercise'|trans }} {{ exo }}</span>
+            <div class="search-field d-none d-xl-block">
+                <form class="d-flex align-items-center h-100" action="#">
+                    <div class="input-group">
+                        <div class="input-group-prepend bg-transparent">
+                            <i class="input-group-text border-0 mdi mdi-magnify"></i>
+                        </div>
+                        <input type="text" class="form-control bg-transparent border-0" placeholder="{% trans %}Search...{% endtrans %}">
+                    </div>
+                </form>
+            </div>
+
+            <ul class="navbar-nav navbar-nav-right  text-light">
+
+
+                <li class="nav-item nav-profile dropdown">
+                    <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                        <div class="nav-profile-img">
+                            {% if (app.user.photo) %}
+                                <img src="{{ asset('images/uploads/users/') }}{{ app.user.photo }}" alt="image">
+                            {% else %}
+                                <img src="{{ asset('assets/images/webapp/user.png') }}" alt="image">
+                            {% endif %}
+                        </div>
+                        <div class="nav-profile-text">
+                            <p class="mb-1 text-black fw-bold text-white">{{ app.user.titre }} {{ app.user.prenomsUtilisateur }} {{ app.user.nomUtilisateur }}</p>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu navbar-dropdown dropdown-menu-right p-0 border-0 font-size-sm" aria-labelledby="profileDropdown" data-x-placement="bottom-end">
+                        <div class="p-3 text-center bg-primary">
+                            <img class="img-avatar img-avatar48 img-avatar-thumb" src="{{ asset('images/uploads/users/') }}{{ app.user.photo }}" alt="">
+                        </div>
+                        <a class="nav-link dropdown-toggle" id="languageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                            <div class="nav-language-icon">
+                                <img src="{{ asset('assets/images/') }}{{ app.locale }}.png" height="16" alt="{{ app.locale }}">
+                            </div>
+                            <div class="nav-language-text">
+                                <p class="mb-1  text-dark" style="margin-left: 5px;">
+                                    {% if(app.locale == 'fr') %}
+                                        Français
+                                    {% elseif(app.locale == 'en') %}
+                                        English
+                                    {% elseif(app.locale == 'es') %}
+                                        Espanol
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu navbar-dropdown" aria-labelledby="languageDropdown">
+                            {% for locale in locales %}
+                                <a class="dropdown-item language-selector" href="#" id="{{ locale }}">
+
+                                    <div class="nav-language-icon mr-2">
+                                        <img src="{{ asset('assets/images/') }}{{ locale }}.png" height="16" alt="{{ locale }}">
+                                    </div>
+                                    <div class="nav-language-text">
+                                        <p class="mb-1">
+                                            {% if(locale == 'fr') %}
+                                                Français
+                                            {% elseif(locale == 'en') %}
+                                                English
+                                            {% elseif(locale == 'es') %}
+                                                Espanol
+                                            {% endif %}
+                                        </p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                            {% endfor %}
+
+                        </div>
+                        <div class="p-2">
+                            {#<h5 class="dropdown-header text-uppercase pl-2 text-dark">{% trans %}User Options{% endtrans %}</h5>#}
+                            <a class="dropdown-item py-1 d-flex align-items-center justify-content-between" href="#">
+                                <span>{% trans %}Inbox{% endtrans %}</span>
+                                <span class="p-0">
+                      <span class="badge badge-primary">3</span>
+                      <i class="mdi mdi-email-open-outline ml-1"></i>
+                    </span>
+                            </a>
+                            <a class="dropdown-item py-1 d-flex align-items-center justify-content-between" href="{{ path('my_profile', {'id_utilisateur': app.user.id}) }}">
+                                <span>{% trans %}Profile{% endtrans %}</span>
+                                <span class="p-0">
+                      <span class="badge badge-success">1</span>
+                      <i class="mdi mdi-account-outline ml-1"></i>
+                    </span>
+                            </a>
+                            <a class="dropdown-item py-1 d-flex align-items-center justify-content-between" href="javascript:void(0)">
+                                <span>{% trans %}Settings{% endtrans %}</span>
+                                <i class="mdi mdi-settings"></i>
+                            </a>
+                            <div role="separator" class="dropdown-divider"></div>
+                            <h5 class="dropdown-header text-uppercase  pl-2 text-dark mt-2">{% trans %}Actions{% endtrans %}</h5>
+
+                            <a class="dropdown-item py-1 d-flex align-items-center justify-content-between" href="{{ path('app_logout') }}">
+                                <span>{% trans %}Log Out{% endtrans %}</span>
+                                <i class="mdi mdi-logout ml-1"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                        <i class="mdi mdi-email-outline text-white"></i>
+                        <span class="count-symbol bg-success"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+                        <h6 class="p-3 mb-0 bg-primary text-white py-4">{% trans %}Messages{% endtrans %}</h6>
+                        <div class="dropdown-divider"></div>
+
+                        <div class="dropdown-divider"></div>
+                        {#<h6 class="p-3 mb-0 text-center">4 new messages</h6>#}
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    {% set i = 0 %}
+                        {% for notification in mes_notifs %}
+                            {% set i = i + 1 %}
+                        {% endfor %}
+                    {% if i > 0 %}
+                    <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+                        <i class="mdi mdi-bell-outline text-white"></i>
+                        <span class="count-symbol bg-danger"></span>
+                    </a>
+
+
+
+                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                        <h6 class="p-3 mb-0 bg-danger text-white py-4">{% trans %}Notifications{% endtrans %}</h6>
+                        {% block notifs %}
+
+                        {% endblock %}
+                    </div>
+                    {% endif %}
+                </li>
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                <span class="mdi mdi-menu"></span>
+            </button>
+        </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        {% include 'base/menu.html.twig' %}
+        <!-- partial -->
+        <div class="main-panel alert-light">
+
+            {#Banniere OPERATEUR#}
+
+                {% if (app.user.codeOperateur.id == 1)%}
+                    {% if(app.user.codeDirection) %}
+                        <h3 class="p-2 text-center text-dark" style="background: linear-gradient(#abb0b8, #c2e8ee)">{{ app.user.codeDirection.denomination }}</h3>
+
+                    {% elseif(app.user.codeService) %}
+                        <h3 class="p-2 text-center text-dark" style="background: linear-gradient(#d9d3d0, #f7d6b7)">{{ app.user.codeDirection.denomination }}</h3>
+                    {% else %}
+                        <h3 class="p-2 text-center text-dark" style="background: linear-gradient(#dbd6d4, #badcdc)">{{ 'Administrator' | trans }}</h3>
+                    {% endif %}
+                {% elseif (app.user.codeOperateur.id == 2)%}
+                    <h3 class="p-2 text-center text-dark" style="background: linear-gradient(#b8e4af, #97af9c)">{{ app.user.codeexploitant.raisonSocialeExploitant }}</h3>
+                {% elseif (app.user.codeOperateur.id == 3)%}
+                    <h3 class="p-2 text-center text-dark" style="background: linear-gradient(#f8f2d1, #dcd4ba)">{{ app.user.codeindustriel.raisonSocialeUsine }}</h3>
+                {% elseif (app.user.codeOperateur.id == 4)%}
+                    <h3 class="p-2 text-center text-dark" style="background: linear-gradient(#b2b4b5, #e0c7f5)">{{  app.user.codeExportateur.raisonSocialeExportateur }}</h3>
+
+                {% elseif (app.user.codeOperateur.id == 5)%}
+                    <h3 class="p-2 text-center text-dark" style="background: linear-gradient(#86fbc0, #859e8d)">{{  app.user.codeDr.denomination }}</h3>
+                {% elseif (app.user.codeOperateur.id == 6)%}
+                    <h3 class="p-2 text-center text-dark" style="background: linear-gradient(#d4d6d5, #b6b9b8)">{{  app.user.codeDdef.nomDdef }}</h3>
+                {% elseif (app.user.codeOperateur.id == 7)%}
+                    <h3 class="p-2 text-center text-dark" style="background: linear-gradient(#f9f4cc, #f4f3ef)">{{  app.user.codeCantonnement.nomCantonnement }}</h3>
+                {% elseif (app.user.codeOperateur.id == 10)%}
+                    <h3 class="p-2 text-center text-dark" style="background: linear-gradient(#fbefe3, #ebebea)">{{  app.user.codePosteControle.denomination }}</h3>
+                {% endif %}
+
+
+            <div class="content-wrapper">
+                <div class="d-xl-flex justify-content-between align-items-start">
+                    {% block titre_page %}
+
+                    {% endblock %}
+                </div>
+                {% block page_content %}
+
+                {% endblock %}
+            </div>
+            <!-- content-wrapper ends -->
+            <!-- partial:partials/_footer.html -->
+            <input type="hidden" value="{{ app.user.locale }}">
+            <footer class="footer">
+                <div class="footer-inner-wraper">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                        <span class="text-dark d-block text-center text-sm-left d-sm-inline-block"><a class=" new-link text-primary" href="https://www.eauxetforets.gouv.ci/" target="_blank">{% trans %}MINISTRY_NAME{% endtrans %}</a> {% trans %}Copyright ©{% endtrans %} {% trans %}WEBSITE{% endtrans %} {% trans %}YEAR{% endtrans %}</span>
+                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">  <a href="https://www.system2is.gouv.ci/" style="color: red" target="_blank">{% trans %}DEVELOPER{% endtrans %}</a></span>
+                    </div>
+                </div>
+            </footer>
+            <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
+
+<script src="{{ asset('assets/assets/vendors/js/vendor.bundle.base.js') }}"></script>
+<script src="{{ asset('assets/assets/vendors/chart.js/Chart.min.js') }}"></script>
+<script src="{{ asset('assets/assets/js/off-canvas.js') }}"></script>
+<script src="{{ asset('assets/assets/vendors/jquery-circle-progress/js/circle-progress.min.js') }}"></script>
+<script src="{{ asset('assets/assets/js/hoverable-collapse.js') }}"></script>
+<script src="{{ asset('assets/assets/js/misc.js') }}"></script>
+<script src="{{ asset('assets/assets/js/dashboard.js') }}"></script>
+<script src="{{ asset('assets/node_modules/jquery/dist/jquery.min.js') }}"></script>
+
+
+<script src="{{ asset('assets/webapp/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
+<script src="{{ asset('assets/webapp/assets/js/bootstrap.bundle.min.js') }}"></script>
+
+<script src="{{ asset('assets/webapp/assets/vendors/apexcharts/apexcharts.js') }}"></script>
+<script src="{{ asset('assets/webapp/assets/js/pages/dashboard.js') }}"></script>
+
+<script src="{{ asset('assets/webapp/assets/js/main.js') }}"></script>
+
+<script>
+
+</script>
+
+
+<script>
+    let langue = document.querySelector('#langue').value;
+    $.ajax({
+            type: 'POST',
+            url: '{{ path('changeLocale') }}',
+            data: {lang: langue},
+            success: function () {location.reload();}
+        });
+
+        $(document).ready(function() {
+
+            $(document).ready(function () {
+                $("#flash").delay(4000).fadeOut("slow");
+            });
+
+
+            $('.language-selector').on("click",function () {
+                let lang = $(this).attr("id");
+                $.ajax({
+                    type: 'POST',
+                    url: '{{ path('changeLocale') }}',
+                    data: {lang: lang},
+                    success: function () {location.reload();}
+                });
+            })
+
+            $('body').one('click', '.notif_id', function (){
+                $.ajax({
+                    type: 'POST',
+                    url: '{{ path('app_login') }}snvlt/admin/validation/notif_lu/' + this.id,
+                    data: {id_notification: this.id},
+                    success: function () {
+                        console.log(response);
+                        let reponse = JSON.parse(response);
+
+                    }
+                });
+            })
+        });
+
+</script>
+</body>
+</html>

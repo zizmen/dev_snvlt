@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('assets/login/style_login.css') }}">
+
+    <!-- Bootstrap5 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+    <title>{% trans %}Reset your password{% endtrans %}</title>
+</head>
+<body class="d-flex text-center" style="background-image: url('{{ asset('assets/images/fond_login.jpg') }}'); background-size: cover; background-repeat: no-repeat;">
+
+
+
+
+{{ form_start(requestForm, {'attr' : {'class' : 'form-login'}}) }}
+{% for flash_error in app.flashes('reset_password_error') %}
+    <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+{% endfor %}
+<img src="{{ asset('assets/images/logo_snvlt.png') }}" height="120" alt="SNVLT">
+<h1>{% trans %}Reset your password{% endtrans %}</h1>
+{{ form_row(requestForm.email, {'attr':{'class': 'form-control mb-3', 'placeholder':'email'}}) }}
+
+<div>
+    <small>
+        {% trans %}Enter your email address, and we will send you a
+        link to reset your password.{% endtrans %}
+    </small>
+</div>
+
+<button class="btn btn-primary">{% trans %}Send password reset email{% endtrans %}</button>
+{{ form_end(requestForm) }}
+
+
+<!-- Optional JavaScript -->
+<!-- Popper.js first, then Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</body>
+</html>

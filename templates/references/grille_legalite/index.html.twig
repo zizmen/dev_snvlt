@@ -1,0 +1,84 @@
+{% extends 'template_base.html.twig' %}
+
+{% block Title %}
+    {% trans %}SNVLT{% endtrans %} - {% trans %}Legality Grid{% endtrans %}
+{% endblock %}
+
+
+{% block titre_page %}
+    <h2 class="text-dark font-weight-bold mb-2">
+        <img src="{{ asset('assets/images/webapp/grille_legalite.png') }}" alt="attribution">  {% trans %}Legality Grid{% endtrans %}
+    </h2>
+    <div class="d-sm-flex justify-content-xl-between align-items-center mb-2">
+        <div class="btn-group p-1 rounded-5 " role="group" aria-label="Basic example">
+            <a class="btn btn-inverse-danger p-2 mt-2" style="border: 0px; font-size: 16px;" href="{{ path('grille_legalite.edit') }}"> <i class="mdi mdi-plus-circle me-2" style="font-size: 20px;"></i>{% trans %}Add{% endtrans %}</a>
+        </div>
+    </div>
+{% endblock %}
+
+ {% block notifs %}
+     {% include 'base/notifs.html.twig' %}
+ {% endblock %}
+
+ {% block menu %}
+     {% include 'base/menu.html.twig' %}
+ {% endblock %}
+
+{% block page_content %}
+    <link rel="stylesheet" href="{{ asset('assets/webapp/assets/vendors/simple-datatables/style.css') }}">
+    <section class="section">
+        <div class="card">
+
+            <div class="card-body">
+                <table class="table table-responsive" id="grille_legalite">
+                    <thead>
+                    <tr style="background: #e2ffed">
+                        <th>{% trans %}Document{% endtrans %}</th>
+                        <th>{% trans %}Periodicity{% endtrans %}</th>
+                        <th>{% trans %}Elapsed time{% endtrans %}</th>
+                        <th>{% trans %}Status{% endtrans %}</th>
+                        <th>{% trans %}Operator{% endtrans %}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for grille_legalite in liste_grille_legalites %}
+                        {% if (grille_legalite.codeOperateur is same as 2) %}
+                        <tr class="fw-bold text-primary">
+                            {% elseif (grille_legalite.codeOperateur is same as 3)%}
+                                <tr class="fw-bold text-success">
+                                    {% elseif (grille_legalite.codeOperateur is same as 4)%}
+                                        <tr class="fw-bold text-dark">
+                                            {% endif %}
+                        <td><a class="link editBtn badge  text-dark" style="font-weight: bold;font-size: 16px;background: #f7f4f4" href="{{ path('grille_legalite.edit', {'id_grille_legalite': grille_legalite.id })}}" id="{{ grille_legalite.id }}">{{ grille_legalite.libelleDocument | slice(0, 100, "...") }}</a></td>
+                            <td>{{ grille_legalite.periodicite }}</td>
+                            <td>{{ grille_legalite.duree }}</td>
+                            <td>
+                            {% if (grille_legalite.statut is same as 'INACTIF') %}
+                                <span class="badge p-2 alert-light-danger text-danger">{{ grille_legalite.statut}}</span>
+                            {% else %}
+                                <span class="badge p-2 alert-light-success text-success">{{ grille_legalite.statut}}</span>
+                            {% endif %}
+
+                            </td>
+                            <td>{{ grille_legalite.codeOperateur.libelleOperateur}}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="{{ asset('assets/webapp/assets/vendors/simple-datatables/simple-datatables.js') }}"></script>
+    <script src="{{ asset('assets/webapp/assets/vendors/jquery/jquery.min.js') }}"></script>
+
+    <script>
+        // Simple Datatable
+        let table1 = document.querySelector('#grille_legalite');
+        let dataTable = new simpleDatatables.DataTable(table1);
+    </script>
+
+
+{% endblock %}
+

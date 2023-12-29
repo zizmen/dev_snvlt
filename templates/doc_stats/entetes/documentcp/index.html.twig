@@ -1,0 +1,105 @@
+{% extends 'template_base.html.twig' %}
+
+{% block Title %}
+    {% trans %}SNVLT{% endtrans %} - {% trans %}My CP{% endtrans %}
+{% endblock %}
+
+{% block titre_page %}
+    <h2 class="text-dark font-weight-bold mb-2">
+        <img src="{{ asset('assets/images/webapp/document_operateur.png') }}" alt="{% trans %}Direction{% endtrans %}">  {% trans %}My CP{% endtrans %}
+    </h2>
+{% endblock %}
+
+
+ {% block notifs %}
+     {% include 'base/notifs.html.twig' %}
+ {% endblock %}
+
+ {% block menu %}
+     {% include 'base/menu.html.twig' %}
+ {% endblock %}
+
+{% block page_content %}
+    <link rel="stylesheet" href="{{ asset('assets/webapp/assets/vendors/simple-datatables/style.css') }}">
+    <section class="section">
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-responsive" id="my_cps" style="width: 100%;">
+                    <thead>
+                    <tr style="background: #f2f2f2;color: #181717; font-weight: bold;">
+                        <th>{% trans %}CP No{% endtrans %}</th>
+                        <th class="text-center">{% trans %}Forest{% endtrans %}</th>
+                        <th>{% trans %}Cantonment{% endtrans %}</th>
+                        <th>{% trans %}Regional Direction{% endtrans %}</th>
+                        <th>{% trans %}Delivery date{% endtrans %}</th>
+                        {% if not app.user.codeexploitant %}
+                            <th>{% trans %}Logger{% endtrans %}</th>
+                            <th>{% trans %}Code Logger{% endtrans %}</th>
+                        {% endif %}
+                        <th>{% trans %}Volume{% endtrans %}</th>
+                    </tr>
+                    </thead>
+                    <tbody id="body_contenu">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="{{ asset('assets/webapp/assets/vendors/simple-datatables/simple-datatables.js') }}"></script>
+    <script src="{{ asset('assets/webapp/assets/vendors/jquery/jquery.min.js') }}"></script>
+
+    <script>
+        // Simple Datatable
+        let table1 = document.querySelector('#my_cps');
+        let dataTable = new simpleDatatables.DataTable(table1);
+
+        //Chargement de la liste des CP pour l'opérateur
+        mes_cp();
+
+        function mes_cp(){
+
+            $.ajax({
+                url: '{{ url('app_docs_cp_json') }}',
+                type: 'POST',
+                success: function(response) {
+
+                    let doccp_liste = JSON.parse(response);
+                    let contenu = '';
+                    let table = document.querySelector("#my_cps");
+
+                    for(var i = 0; i < doccp_liste.length ; i++){
+                        if(doccp_liste[i].etat === false){
+                        contenu = contenu +'<tr class="alert-danger">';
+                        } else if(doccp_liste[i].volume_arbre > 0) {
+                            contenu = contenu +'<tr class="text-dark" style="background: #f0f054">';
+                        }else  {
+                            contenu = contenu +'<tr>';
+                        }
+
+                                contenu = contenu + '<td><a class="text-dark font-weight-bold" style="font-size: 18px;" href="{{ url('app_login') }}snvlt/doccp/op/pages/' + doccp_liste[i].id_document_cp + '" id="' + doccp_liste[i].id_document_cp + '">' + doccp_liste[i].numero_doccp + '</a></td>' +
+                                '<td><span class="badge p-1 bg-warning font-weight-bold text-center" style="font-size: 16px;"> ' + doccp_liste[i].foret  + '</span></td>'+
+                                '<td><span>' + doccp_liste[i].cantonnement  + '</span></td>'+
+                                '<td><span>' + doccp_liste[i].dr  + '</span></td>'+
+                                '<td><span>' + doccp_liste[i].date_delivrance  + '</span></td>';
+                                {% if not app.user.codeexploitant %}
+                                contenu = contenu +'<td><span>' + doccp_liste[i].exploitant  + '</span></td>'+
+                                                    '<td><span>' + doccp_liste[i].code_exploitant  + '</span></td>';
+                                {% endif %}
+                                contenu = contenu +'<td>'+ doccp_liste[i].volume_arbre + '</td></tr>';
+                    }
+                    contenu = contenu + '</div>'
+                    document.querySelector('#body_contenu').innerHTML = contenu;
+
+
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            })
+        }
+
+    </script>
+{% endblock %}

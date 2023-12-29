@@ -1,0 +1,143 @@
+{% extends 'template_base.html.twig' %}
+
+{% block Title %}
+    SNVLT - Administrateur
+{% endblock %}
+
+{% block titre_page %}
+    <div class="d-sm-inline">
+        <img src="{{ asset('assets/images/webapp/essences.png') }}" alt="dr">  Essences Forestières <a
+                class="fs-6 p-2 text-light float-end" style="background-color: #f66002; border-radius: 10px;" href="{{ path('essence.edit') }}">Ajouter une essence</a>
+    </div>
+
+{% endblock %}
+
+ {% block menu %}
+    {% include 'base/menu.html.twig' %}
+ {% endblock %}
+
+{% block page_content %}
+    <link rel="stylesheet" href="{{ asset('assets/webapp/assets/vendors/simple-datatables/style.css') }}">
+    <section class="section">
+        <div class="card">
+            <div class="card-header">
+               <span class="fw-bold fs-4 p-2 mb-5" style="color: #3f5a70">Interface de gestion des essences forestières</span> <p class="alert-secondary p-2 text-dark text-end rounded-4 text-danger"> cliquez sur le nom vernaculaire de l'essence dans la liste pour la modifier</p>
+            </div>
+            <div class="card-body">
+                <table class="table" id="essences">
+                    <thead>
+                    <tr>
+                        <th>Code Essence</th>
+                        <th>Nom vernaculaire</th>
+                        <th>Nom scientifique</th>
+                        <th>Catégorie</th>
+                        <th>Diamètre minima autorisé (cm)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for essence in liste_essences %}
+
+                        <tr>
+                            <td class="text-dark">{{ essence.numeroEssence }}</td>
+                            <td class="text-dark fw-bold"><a class="link-dark editBtn" href="{{ path('essence.edit', {'id_essence': essence.id })}}" id="{{ essence.id }}">{{ essence.nomVernaculaire }}</a></td>
+                            <td>{{ essence.nomScientifique }}</td>
+                            <td>{{ essence.categorieEssence }}</td>
+                            <td>{{ essence.dmMinima }}</td>
+                            </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <!--Modification de l'essence -->
+        <div class="modal fade text-left" id="modal-essences" tabindex="-1"
+             role="dialog" aria-labelledby="myModalLabel110"
+             aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+                 role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #045009">
+                        <h5 class="modal-title text-light" id="myModalLabel110">
+                            Modifier Essence
+                        </h5>
+                        <button type="button" class="close"
+                                data-bs-dismiss="modal" aria-label="Close">
+                            <i data-feather="x"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body text-dark p-3 " style="background-color: #e8efea">
+                        {{ form_start(form, {'attr': {novalidate: 'novalidate'}}) }}
+                        <div class="row p-3 bg-white m-1">
+                            <div class="col-md-6">
+                                <div class="">{{ form_row(form.numero_essence) }}</div>
+                                <div class="">{{ form_row(form.nom_vernaculaire) }}</div>
+                                <div class="">{{ form_row(form.nom_scientifique) }}</div>
+                                <div class="">{{ form_row(form.categorie_essence) }}</div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="">{{ form_row(form.famille_essence) }}</div>
+                                <div class="">{{ form_row(form.dm_minima) }}</div>
+                                <div class="">{{ form_row(form.taxe_abattage) }}</div>
+                                <div class="">{{ form_row(form.taxe_preservation) }}</div>
+                            </div>
+                        </div>
+
+                        {{ form_end(form) }}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button"
+                                class="btn btn-light-danger"
+                                data-bs-dismiss="modal">
+                            <i class="bi bi-display"></i>
+                            <span class="d-none d-sm-block">Annuler</span>
+                        </button>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <script src="{{ asset('assets/webapp/assets/vendors/simple-datatables/simple-datatables.js') }}"></script>
+    <script src="{{ asset('assets/webapp/assets/vendors/jquery/jquery.min.js') }}"></script>
+
+    <script>
+        // Simple Datatable
+        let table1 = document.querySelector('#essences');
+        let dataTable = new simpleDatatables.DataTable(table1);
+    </script>
+    <script>
+
+        /*$('body').on('click', '.editBtn', function(e){
+            e.preventDefault();
+            $.ajax({
+                url:'{{ path('edit-essence') }}/' + this.id,
+                type : 'POST',
+                data : {id_essence: this.id},
+                success: function(response){
+                    console.log(response);
+                    let essenceInfo = JSON.parse(response);
+
+                    $('#essences_numero_essence').val(essenceInfo.code_essence);
+                    $('#essences_nom_vernaculaire').val(essenceInfo.nom_vernaculaire);
+                    $('#essences_nom_scientifique').val(essenceInfo.nom_scientifique);
+                    $('#essences_categorie_essence').val(essenceInfo.categorie);
+                    $('#essences_dm_minima').val(essenceInfo.dm_minima);
+                    $('#essences_famille_essence').val(essenceInfo.famille_essence);
+                    $('#essences_taxe_abattage').val(essenceInfo.taxe_abattage);
+                    $('#essences_taxe_preservation').val(essenceInfo.taxe_preservation);
+
+                }
+            })
+        })*/
+    </script>
+    <script src="{{ asset('assets/webapp/assets/js/main.js') }}"></script>
+
+
+{% endblock %}
+

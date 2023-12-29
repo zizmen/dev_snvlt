@@ -1,0 +1,505 @@
+{% extends 'template_base.html.twig' %}
+
+{% block Title %}
+    {% trans %}SNVLT{% endtrans%} - {% trans %}Users{% endtrans %}
+{% endblock %}
+{% block titre_page %}
+    <h2 class="text-dark font-weight-bold mb-2">
+        <img src="{{ asset('assets/images/webapp/responsable.png') }}"  alt="{% trans %}users{% endtrans %}">  {% trans %}All Managers{% endtrans %}
+    </h2>
+    <div class="d-sm-flex justify-content-xl-between align-items-center mb-2">
+        <div class="btn-group p-1 rounded-5 " role="group" aria-label="Basic example">
+            <sapn class="badge alert-success p-2 text-dark" style="font-size: 16px;font-weight: lighter;"> {% trans %}Is manager{% endtrans %}</sapn>
+        </div>
+        <div class="btn-group p-1 rounded-5 me-5" role="group" aria-label="Basic example">
+            <sapn class="badge bg-danger text-white p-1 ms-2" style="font-size: 16px;font-weight: lighter;">{% trans %}Is locked{% endtrans %}</sapn>
+        </div>
+        <div class="btn-group p-1 rounded-5 " role="group" aria-label="Basic example">
+            <a class="btn" style="border: 0px; font-size: 16px;" href="{{ path('secure_au_user') }}" title="{% trans %}Add a manager{% endtrans %}"> <i class="mdi mdi-plus-circle me-2" style="font-size: 32px;color: red"></i></a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block notifs %}
+{% endblock %}
+
+ {% block menu %}
+     {% include 'base/menu.html.twig' %}
+ {% endblock %}
+
+{% block page_content %}
+
+
+    <section class="section p-2 bg-white">
+
+        <div class="card">
+
+            <div class="card-body">
+                <div class="row alert-light mb-1" style="margin-left: 2px; margin-right: 2px;">
+                    <div class="col-md-4 row">
+                        <div class="alert-primary p-1 m-2" style="height: 16px;width: 16px;border: #0c5460 1px solid;"></div><span class="m-2 font-weight-bold">{{ 'Central administration' | trans }}</span>
+                    </div>
+                    <div class="col-md-4 row">
+                        <div class="bg-warning p-1 m-2" style="height: 16px;width: 16px;border: #0c5460 1px solid;"></div><span class="m-2 font-weight-bold">{{ 'Local administration' | trans }}</span>
+                    </div>
+                    <div class="col-md-4 row">
+                        <div class="alert-success p-1 m-2" style="height: 16px;width: 16px;border: #0c5460 1px solid;"></div><span class="m-2 font-weight-bold">{{ 'Operator' | trans }}</span>
+                    </div>
+                </div>
+                <table class="table table-responsive" id="utilisateurs">
+                    <thead>
+                    <tr style="background: #207e0c; color: #f0fcf0;">
+                        <th></th>
+                        <th>{% trans %}Firstname and Lastname{% endtrans %}</th>
+                        <th>{% trans %}Email{% endtrans %}</th>
+                        <th>{% trans %}Contacts{% endtrans %}</th>
+                        <th>{% trans %}Group{% endtrans %}</th>
+                        <th>{% trans %}Type of Operator{% endtrans %}</th>
+                        <th>{% trans %}Structure{% endtrans %}</th>
+                        <th>{% trans %}Action{% endtrans %}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for utilisateur in liste_users %}
+
+                        {% if (utilisateur.actif == true) %}
+                            <tr>
+                        {% else %}
+                            <tr class="bg-danger text-white fst-italic" title="{% trans %}This user is blocked into the system{% endtrans %}">
+                        {% endif %}
+                            <td class="py-1">
+                                {% if( utilisateur.photo ) %}
+                                    <a href="#" ><img src="{{ asset('images/uploads/users/') }}{{ utilisateur.photo }}" alt="avatar" height="48"></a>
+                                {% else %}
+                                    <img src="{{ asset('assets/images/webapp/user.png') }}" alt="avatar"  height="48">
+                                {% endif %}
+                            </td>
+                            <td class="text-dark ">
+                                <div class="col">
+                                    <button
+                                            type="button"
+                                            {#class="btn btn-outline-google border-0 "
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#profileUser"
+                                            id="{{ utilisateur.id }}"
+                                            title="{{ utilisateur.prenomsUtilisateur}} {{ utilisateur.nomUtilisateur}}"#}
+                                    >
+                                        {% if(utilisateur.isResponsable) %}
+                                            <sapn class="badge bg-warning text-dark" style="font-size: 16px;">{{ utilisateur.titre}} {{ utilisateur.prenomsUtilisateur}} {{ utilisateur.nomUtilisateur}}</sapn>
+                                        {% else %}
+                                            <sapn class="fs-7"  style="font-size: 16px;">{{ utilisateur.prenomsUtilisateur}} {{ utilisateur.nomUtilisateur}}</sapn>
+                                        {% endif %}
+                                    </button>
+                                </div>
+
+
+                            </td>
+                            <td style="font-size: 16px;">{{ utilisateur.email }}</td>
+                            <td style="font-size: 16px;">{{ utilisateur.mobile }}</td>
+                            <td style="font-size: 16px;">{{ utilisateur.codeGroupe.nomGroupe }}</td>
+                            <td style="font-size: 16px;">{% if(utilisateur.codeOperateur) %}
+                                    {{ utilisateur.codeOperateur.libelleOperateur }}
+                                {% else %}
+                                    -
+                                {% endif %}
+                            </td>
+                            <td style="font-size: 16px;font-weight: bold;color: #0f5132">
+                                {% if(utilisateur.codeOperateur) %}
+                                    {% if(utilisateur.codeOperateur.id == 1) %}
+                                        {% if(utilisateur.codeService == null and utilisateur.codeDirection == null) %}
+                                            -
+                                            {% else %}
+                                                {% if(utilisateur.codeService)  %}
+                                                    <h3 class="badge alert-primary p-2" style="font-size: medium">{{ utilisateur.codeService.sigle}}</h3>
+                                                {% else %}
+                                                    <h3 class="badge alert-primary p-2" style="font-size: medium">{{ utilisateur.codeDirection.sigle }}</h3>
+                                            {% endif %}
+                                        {% endif %}
+
+                                    {% elseif(utilisateur.codeOperateur.id == 2) %}
+                                                     <h3 class="badge alert-success p-2" style="font-size: medium">{{ utilisateur.codeexploitant.sigle }}</h3>
+                                    {% elseif(utilisateur.codeOperateur.id == 3) %}
+                                        <h3 class="badge alert-success p-2" style="font-size: medium">{{ utilisateur.codeindustriel.sigle}}</h3>
+                                    {% elseif(utilisateur.codeOperateur.id == 4) %}
+                                        <h3 class="badge alert-success p-2" style="font-size: medium">{{ utilisateur.codeExportateur.raisonSocialeExportateur}}</h3>
+                                    {% elseif(utilisateur.codeOperateur.id == 5) %}
+                                        <h3 class="badge bg-warning p-2" style="font-size: medium">{{ utilisateur.codeDr.denomination }}</h3>
+                                    {% elseif(utilisateur.codeOperateur.id == 6) %}
+                                        <h3 class="badge bg-warning p-2" style="font-size: medium">{{ utilisateur.codeDdef.nomDdef }}</h3>
+                                    {% elseif(utilisateur.codeOperateur.id == 7) %}
+                                        <h3 class="badge bg-warning p-2" style="font-size: medium">{{ utilisateur.codeCantonnement.nomCantonnement }}</h3>
+                                    {% elseif(utilisateur.codeOperateur.id == 10) %}
+                                        <h3 class="badge bg-warning p-2" style="font-size: medium">{{ utilisateur.codePosteControle.denomination }}</h3>
+                                    {% else %}
+                                        -
+                                    {% endif %}
+                                {% endif %}
+                            </td>
+                            <td>
+                                <button  class="btn monprofil" id="{{ utilisateur.id }}">
+                                    <img src="{{ asset('assets/images/webapp/user.png') }}" alt="user" height="24">
+                                </button>
+                                {% if (utilisateur.actif) %}
+                                    {% if(utilisateur.codeOperateur.id == 2 or utilisateur.codeOperateur.id == 3 or utilisateur.codeOperateur.id == 4) %}
+                                        <a href="#" class="bloquer" id="{{ utilisateur.id }}"><img src="{{ asset('assets/icons/lock.png') }}" height="16" alt="Bloquer"></a>
+                                    {% endif %}
+                                {% else %}
+                                    {% if(utilisateur.codeOperateur.id == 2 or utilisateur.codeOperateur.id == 3 or utilisateur.codeOperateur.id == 4) %}
+                                        <a href="#"  class="debloquer" id="{{ utilisateur.id }}"><img src="{{ asset('assets/icons/unlock.png') }}" height="16" alt="Débloquer"></a>
+                                    {% endif %}
+                                {% endif %}
+
+                            </td>
+
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+       {# Modal qui affiche les infos de l'utilisateur#}
+        {#<div class="col-lg-4 col-md-3">
+            <small class="text-dark fw-semibold">{{ 'Informations' | trans}}</small>
+            <div class="mt-3">
+
+                <!-- Modal -->
+                <div class="modal fade" id="profileUser" data-bs-backdrop="static" tabindex="-1">
+                    <div class="modal-dialog modal-lg">
+                        <form class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-dark" id="profileUserTitle">{{ 'User Information' | trans }}</h5>
+                                <button
+                                        type="button"
+                                        class="btn-close"
+                                        data-bs-dismiss="modal"
+                                        aria-label="Close"
+                                ></button>
+                            </div>
+                            <div class="modal-body">
+
+                                <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="nav nav-pills flex-column flex-md-row mb-3">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="javascript:void(0);"><i class="bx bx-user me-1"></i> {{ 'Account' | trans}}</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages-account-settings-notifications.html"
+                                            ><i class="bx bx-bell me-1"></i> {{ 'Notifications' | trans }}</a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages-account-settings-connections.html"
+                                            ><i class="bx bx-link-alt me-1"></i> {{ 'Connections' | trans }}</a
+                                            >
+                                        </li>
+                                    </ul>
+                                    <div class="card mb-4">
+                                        <h5 class="card-header">{{ 'Profile Details' | trans }}</h5>
+                                        <!-- Account -->
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-start align-items-sm-center gap-4">
+                                                <img
+                                                        src="{{ asset('assets/images/webapp/user.png') }}"
+                                                        alt="user-avatar"
+                                                        class="d-block rounded"
+                                                        height="100"
+                                                        width="100"
+                                                        id="uploadedAvatar"
+                                                />
+                                                <div class="button-wrapper">
+                                                    <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
+                                                        <span class="d-none d-sm-block">Upload new photo</span>
+                                                        <i class="bx bx-upload d-block d-sm-none"></i>
+                                                        <input
+                                                                type="file"
+                                                                id="upload"
+                                                                class="account-file-input"
+                                                                hidden
+                                                                accept="image/png, image/jpeg"
+                                                        />
+                                                    </label>
+                                                    <button type="button" class="btn btn-outline-secondary account-image-reset mb-4">
+                                                        <i class="bx bx-reset d-block d-sm-none"></i>
+                                                        <span class="d-none d-sm-block">Reset</span>
+                                                    </button>
+
+                                                    <p class="text-muted mb-0">Allowed JPG, GIF or PNG. Max size of 800K</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr class="my-0" />
+                                        <div class="card-body">
+                                            <form id="formAccountSettings" method="POST" onsubmit="return false">
+                                                <div class="row">
+                                                    <div class="mb-3 col-md-6">
+                                                        <label for="firstName" class="form-label">First Name</label>
+                                                        <input
+                                                                class="form-control"
+                                                                type="text"
+                                                                id="firstName"
+                                                                name="firstName"
+                                                                value="John"
+                                                                autofocus
+                                                        />
+                                                    </div>
+                                                    <div class="mb-3 col-md-6">
+                                                        <label for="lastName" class="form-label">Last Name</label>
+                                                        <input class="form-control" type="text" name="lastName" id="lastName" value="Doe" />
+                                                    </div>
+                                                    <div class="mb-3 col-md-6">
+                                                        <label for="email" class="form-label">E-mail</label>
+                                                        <input
+                                                                class="form-control"
+                                                                type="text"
+                                                                id="email"
+                                                                name="email"
+                                                                value="john.doe@example.com"
+                                                                placeholder="john.doe@example.com"
+                                                        />
+                                                    </div>
+                                                    <div class="mb-3 col-md-6">
+                                                        <label for="organization" class="form-label">Organization</label>
+                                                        <input
+                                                                type="text"
+                                                                class="form-control"
+                                                                id="organization"
+                                                                name="organization"
+                                                                value="ThemeSelection"
+                                                        />
+                                                    </div>
+                                                    <div class="mb-3 col-md-6">
+                                                        <label class="form-label" for="phoneNumber">Phone Number</label>
+                                                        <div class="input-group input-group-merge">
+                                                            <span class="input-group-text">US (+1)</span>
+                                                            <input
+                                                                    type="text"
+                                                                    id="phoneNumber"
+                                                                    name="phoneNumber"
+                                                                    class="form-control"
+                                                                    placeholder="202 555 0111"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3 col-md-6">
+                                                        <label for="address" class="form-label">Address</label>
+                                                        <input type="text" class="form-control" id="address" name="address" placeholder="Address" />
+                                                    </div>
+                                                    <div class="mb-3 col-md-6">
+                                                        <label for="state" class="form-label">State</label>
+                                                        <input class="form-control" type="text" id="state" name="state" placeholder="California" />
+                                                    </div>
+                                                    <div class="mb-3 col-md-6">
+                                                        <label for="zipCode" class="form-label">Zip Code</label>
+                                                        <input
+                                                                type="text"
+                                                                class="form-control"
+                                                                id="zipCode"
+                                                                name="zipCode"
+                                                                placeholder="231465"
+                                                                maxlength="6"
+                                                        />
+                                                    </div>
+
+                                                    <div class="mb-3 col-md-6">
+                                                        <label for="currency" class="form-label">Currency</label>
+                                                        <select id="currency" class="select2 form-select">
+                                                            <option value="">Select Currency</option>
+                                                            <option value="usd">USD</option>
+                                                            <option value="euro">Euro</option>
+                                                            <option value="pound">Pound</option>
+                                                            <option value="bitcoin">Bitcoin</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-2">
+                                                    <button type="submit" class="btn btn-primary me-2">Save changes</button>
+                                                    <button type="reset" class="btn btn-outline-secondary">Cancel</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- /Account -->
+                                    </div>
+                                    <div class="card">
+                                        <h5 class="card-header">Delete Account</h5>
+                                        <div class="card-body">
+                                            <div class="mb-3 col-12 mb-0">
+                                                <div class="alert alert-warning">
+                                                    <h6 class="alert-heading fw-bold mb-1">Are you sure you want to delete your account?</h6>
+                                                    <p class="mb-0">Once you delete your account, there is no going back. Please be certain.</p>
+                                                </div>
+                                            </div>
+                                            <form id="formAccountDeactivation" onsubmit="return false">
+                                                <div class="form-check mb-3">
+                                                    <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="accountActivation"
+                                                            id="accountActivation"
+                                                    />
+                                                    <label class="form-check-label" for="accountActivation"
+                                                    >I confirm my account deactivation</label
+                                                    >
+                                                </div>
+                                                <button type="submit" class="btn btn-danger deactivate-account">Deactivate Account</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                    Close
+                                </button>
+                                <button type="button" class="btn btn-primary">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>#}
+
+    </section>
+
+    <script src="{{ asset('assets/webapp/assets/vendors/jquery/jquery.min.js') }}"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ asset('assets/select2/select2.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+    <script>
+
+        $('.body').on('click', '.monprofil', function(){
+            let id_user = this.id;
+            alert(id_user);
+            $.ajax({
+                url: '{{ path('app_login') }}snvlt/json_user/' + id_user,
+                type: 'POST',
+                data:{id_user: id_user,
+                },
+                success: function(response) {
+                    console.log(response);
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            })
+        })
+
+                //Changer la langue de la Datatable
+                let url = "";
+                {% if(app.locale == 'fr') %}
+                url = '//cdn.datatables.net/plug-ins/1.13.7/i18n/fr-FR.json';
+                {% elseif(app.locale == 'en') %}
+                url = '//cdn.datatables.net/plug-ins/1.13.7/i18n/en-US.json';
+                {% elseif(app.locale == 'en') %}
+                url = '//cdn.datatables.net/plug-ins/1.13.7/i18n/es-ES.json';
+                {% endif %}
+                var table = new DataTable('#utilisateurs', {
+                    language: {
+                        url: url,
+                    },
+                    theme:'bootstrap'
+                });
+
+
+            // Simple Datatable
+            let table1 = document.querySelector('#utilisateurs');
+            let dataTable = new simpleDatatables.DataTable(table1);
+
+        //Affiche les information sur l'utilisateur
+
+
+
+        $('.bloquer').click(function (e){
+            Swal.fire({
+                title: '{% trans %}SNVLT SECURITY{% endtrans %}',
+                html: "<h4 class='text-danger'>{% trans %}Do you want to lock this user ?{% endtrans %}</h4>",
+                imageUrl: '{{ asset('assets/images/SNVLT.png') }}',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#5daf11',
+                background: '#f8e9e9',
+                confirmButtonText: '{% trans %}Yes, lock{% endtrans %}',
+                toast: true,
+                padding: '3em'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url:'{{ path('secure_lock_user') }}/' + this.id ,
+                        type : 'POST',
+                        data : {id_user: this.id},
+                        success: function(response){
+                            console.log(response);
+                            let parentMenuInfo = JSON.parse(response);
+                        }
+                    });
+                    Swal.fire(
+                        '{% trans %}locked!{% endtrans %}',
+                        '{% trans %}The user is now blocked{% endtrans %}.',
+                        '{% trans %}Success{% endtrans %}'
+                    ).then((result) => {
+                        if (result.isConfirmed) {
+                            document.location.reload();
+                        }
+                    });
+
+                }
+            });
+        });
+
+        $('.debloquer').click(function (e){
+            Swal.fire({
+                title: '{% trans %}SNVLT SECURITY{% endtrans %}',
+                text: "{% trans %}Do you want to unlock this user ?{% endtrans %}",
+                imageUrl: '{{ asset('assets/images/SNVLT.png') }}',
+                showCancelButton: true,
+                confirmButtonColor: '#5daf11',
+                cancelButtonColor: '#d33',
+                confirmButtonText: '{% trans %}Yes, Unlock{% endtrans %}!',
+                toast: true,
+                padding: '1em',
+                background: '#e6f8e8',
+                backdrop: `
+                            rgba(0,0,800,0.4)
+                            url("/images/nyan-cat.gif")
+                            left top
+                            no-repeat
+                          `
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url:'{{ path('secure_unlock_user') }}/' + this.id ,
+                        type : 'POST',
+                        data : {id_user: this.id},
+                        success: function(response){
+                            console.log(response);
+                            let parentMenuInfo = JSON.parse(response);
+                        }
+                    });
+                    Swal.fire(
+                        '{% trans %}Unlocked!{% endtrans %}',
+                        '{% trans %}The user is now active{% endtrans %}.',
+                        '{% trans %}Success{% endtrans %}'
+                    ).then((result) => {
+                        if (result.isConfirmed) {
+                            document.location.reload();
+                        }
+                    });
+
+
+
+                }
+
+            });
+        });
+    </script>
+
+
+
+{% endblock %}

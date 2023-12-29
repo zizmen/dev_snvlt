@@ -1,0 +1,86 @@
+{% extends 'template_base.html.twig' %}
+
+{% block Title %}
+    {% trans %}SNVLT{% endtrans%} - {% trans %}Notifications{% endtrans %}
+{% endblock %}
+
+{% block titre_page %}
+    <h2 class="text-dark font-weight-bold mb-2">
+        <img src="{{ asset('assets/images/webapp/notification.png') }}" alt="{% trans %}Direction{% endtrans %}">  {% trans %}Notifications{% endtrans %}
+    </h2>
+{% endblock %}
+
+
+ {% block notifs %}
+     {% include 'base/notifs.html.twig' %}
+ {% endblock %}
+
+ {% block menu %}
+     {% include 'base/menu.html.twig' %}
+ {% endblock %}
+
+{% block page_content %}
+    <link rel="stylesheet" href="{{ asset('assets/webapp/assets/vendors/simple-datatables/style.css') }}">
+
+    <section class="section">
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-responsive" id="drs">
+                    <thead>
+                        <tr style="background: #f7d0ba;color: #454242">
+                            <th>{% trans %}Notification type{% endtrans %}</th>
+                            <th>{% trans %}Description{% endtrans %}</th>
+                            <th>{% trans %}Issuer{% endtrans %}</th>
+                            <th class="text-center">{% trans %}Received on{% endtrans %}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            {% for notification in all_notifs %}
+                {% if(notification.lu) %}
+                    <tr>
+                {% else %}
+                    <tr class="font-weight-bold text-dark">
+                {% endif %}
+                    <td class="">
+                        <a class="link-dark editBtn" href="{{ path( notification.reference, {'id_notification':notification.id } ) }}" id="{{ notification.id }}">
+                            {% if (notification.lu) %}
+                            <i class="bi bi-check text-dark fw-bold fs-2"></i>
+                                {% else %}
+                                <i class="bi bi-bullseye text-dark fw-bold fs-2"></i>
+                            {% endif %}
+                            {{ notification.sujet }}
+
+                        </a>
+                    </td>
+                    <td class="">{{ notification.description | slice(0, 120)}}...</td>
+                    <td class="">{{recherche_user.find(notification.fromUser)}}</td>
+                    <td class="">{{ notification.createdAt | date('d/m/Y') }}</td>
+                </tr>
+            {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <script src="{{ asset('assets/webapp/assets/vendors/simple-datatables/simple-datatables.js') }}"></script>
+    <script src="{{ asset('assets/webapp/assets/vendors/jquery/jquery.min.js') }}"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+    <script>
+
+        // Simple Datatable
+        let table1 = document.querySelector('#notifications');
+        let dataTable = new simpleDatatables.DataTable(table1);
+
+
+    </script>
+    <script src="{{ asset('assets/webapp/assets/js/main.js') }}"></script>
+
+
+{% endblock %}
+
+
+

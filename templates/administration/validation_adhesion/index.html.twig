@@ -1,0 +1,53 @@
+{% extends 'template_base.html.twig' %}
+
+{% block Title %}
+    {% trans %}SNVLT{% endtrans%} -  {% trans %}Membership validation{% endtrans %}
+{% endblock %}
+
+{% block titre_page %}
+    <img src="{{ asset('assets/images/webapp/membership_validation.png') }}" alt="dr"> {% trans %}Membership validation{% endtrans %}
+
+{% endblock %}
+
+ {% block menu %}
+     {% include 'base/menu.html.twig' %}
+ {% endblock %}
+
+{% block page_content %}
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <section class="section bg-light">
+        <div class="card  bg-light">
+            <div class="card-header  bg-light">
+                <span class="fw-bold fs-4 p-2 mb-2 text-success badge alert-light-success" >{{ notif_en_cours.sujet }}</span>
+            </div>
+            <div class="card-body">
+                <span class="fw-bold ms-4">{% trans %}Message{% endtrans %} :</span>
+                <p class="ms-5">
+                    {{ notif_en_cours.description }}
+                </p>
+                <span class="fw-bold mt-5 ms-4">{% trans %}Description{% endtrans %} :</span>
+                <p class="ms-5">
+                   <span class="text-success fw-bold">{% trans %}Sender{% endtrans %} : </span> {{ sender.nomUtilisateur }} {{ sender.prenomsUtilisateur }}
+                    <br>
+                    <span class="text-success fw-bold">{% trans %}Mobile number{% endtrans %} : </span> {{ sender.mobile }}
+                    <br>
+                     <span class="text-success fw-bold">{% trans %}Email{% endtrans %} : </span> {{ sender.email }}
+
+                    <br>
+
+                </p>
+                <hr>
+                <br>
+                <h4 class="text-danger mb-3 mt-3">{% trans %}Do you want to accept this requester as a member of your organization?{% endtrans %}</h4>
+                <a  class="btn-sm btn-success m-1 p-2 fs-6" href="{{ path('app_administration_validation_adhesion_add', {'id_notification': notif_en_cours.id }) }}"><i class="bi bi-check me-3"></i>{% trans %}Accept the member{% endtrans %}</a>
+                <a  class="btn-sm btn-danger m-1 p-2 fs-6" href="#"><i class="bi bi-arrow-return-left me-3"></i>{% trans %}Refuse Member{% endtrans %}</a>
+            </div>
+        </div>
+
+
+
+
+    </section>
+
+{% endblock %}

@@ -1,0 +1,199 @@
+{% extends 'template_base.html.twig' %}
+
+{% block Title %}
+    {% trans %}SNVLT{% endtrans %} - {% trans %}My documents requests{% endtrans %}
+{% endblock %}
+
+
+{% block titre_page %}
+    <h2 class="text-dark font-weight-bold mb-2">
+        <img src="{{ asset('assets/images/webapp/demande.png') }}" alt="{% trans %}documents_requests{% endtrans %}">  {% trans %}My documents requests{% endtrans %} - {% trans %}Add{% endtrans %}
+    </h2>
+{% endblock %}
+
+ {% block menu %}
+     {% include 'base/menu.html.twig' %}
+ {% endblock %}
+
+{% block notifs %}
+    {% include 'base/notifs.html.twig' %}
+{% endblock %}
+
+{% block page_content %}
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link href="{{ asset('assets/select2/select2.min.css') }}" rel="stylesheet" />
+
+
+    <section class="section">
+        <div class="card">
+            <div class="card-body">
+                <div class="col-md-4">
+                    {#Liste des documents par operateur#}
+                    <label class="text-dark" style="font-weight: bold" for="documents_stats">Type de document</label>
+                    <select class="documents_stats" style="font-weight: bold;" name="documents_stats" id="documents_stats" >
+
+                    </select>
+                    {# Si l'opérateur est exploitant #}
+                    {% if app.user.codeOperateur.id == 2 %}
+                        <label class="text-dark mt-3" style="font-weight: bold" for="reprises">Forêt</label>
+                        <select class="reprises" name="reprises" id="reprises">
+
+                        </select>
+                    {% endif %}
+                    <label class="text-dark mt-3" style="font-weight: bold" for="quantite">Quantité</label>
+                    <input class="form-control text-danger alert-warning" type="text" style="font-weight: bold; font-size: 16px;width: 100px;" id="quantite" value="0">
+
+                </div>
+                <hr>
+                <a href="{{ path('app_demande_operateur') }}" class="btn btn-sm bg-danger p-2 me-2 ms-5 text-white" style="font-weight: lighter"><i class="mdi mdi-backspace" style="font-size: 18px;margin-right: 10px;"></i>{% trans %}Back to list{% endtrans %}</a>
+                <button type="submit" id="btnValider" class="btn btn-sm bg-primary text-white p-2" style="margin-left: 10px;font-weight: lighter">
+
+                    <i class="mdi mdi-file-question" style="font-size: 18px;margin-right: 10px"></i>{% trans %}I send my request{% endtrans %}
+
+                </button>
+            </div>
+        </div>
+
+
+        <!--Modification de l'dr -->
+
+    </section>
+
+    <script src="{{ asset('assets/webapp/assets/vendors/jquery/jquery.min.js') }}"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ asset('assets/select2/select2.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+
+    <script>
+        $('.documents_stats').select2({
+            placeholder: "--Sélectionnez le type de document...",
+            clear: true,
+            width: '100%',
+            theme: 'classic',
+            background : 'lightblue'
+        });
+        $('.reprises').select2({
+            placeholder: "--Sélectionnez la forêt...",
+            clear: true,
+            width: '100%',
+            theme: 'classic'
+        });
+            let valeur = {{ app.user.codeOperateur.id }}
+
+
+
+                //Affiche les types de documents par opérateur
+                let combo_docs = $('.documents_stats');
+            var contenu = " <option value='0'>Sélectionnez le type de document</option>";
+            $.ajax({
+                url:'{{ url('app_login')}}snvlt/docs_op_type/' + valeur,
+                type : 'POST',
+                data : {id_operateur: valeur,
+                },
+                success: function(response){
+                    console.log(response);
+                    let liste_docs = JSON.parse(response);
+
+
+
+                    for(var i = 0; i < liste_docs.length; i++){
+
+                        contenu = contenu + '<option class="alert-danger" value="'+ liste_docs[i].id_doc + '">' + liste_docs[i].libelle + '</option>';
+
+                    }
+
+                    document.querySelector('#documents_stats').innerHTML = contenu
+                    // combo_docs.innerHTML =contenu;
+                    setTimeout(1000);
+                }
+            });
+        {% if(app.user.codeOperateur.id == 2) %}
+        affiche_reprises({{ app.user.codeexploitant.id }})
+        {% endif %}
+            function affiche_reprises(id_exploitant){
+                let combo_foret = $('.reprises');
+                var contenu = " <option value='0'>Sélectionnez la forêt</option>";
+                $.ajax({
+                    url:'{{ url('app_login')}}snvlt/reprises_operateurs/' + id_exploitant,
+                    type : 'POST',
+                    data : {id_exploitant: id_exploitant,
+                    },
+                    success: function(response){
+                        console.log(response);
+                        let liste_docs = JSON.parse(response);
+
+
+
+                        for(var i = 0; i < liste_docs.length; i++){
+
+                            contenu = contenu + '<option class="" value="'+ liste_docs[i].id_reprise + '">' + liste_docs[i].libelle + '</option>';
+
+                        }
+
+                        document.querySelector('#reprises').innerHTML = contenu
+                        // combo_docs.innerHTML =contenu;
+                        //setTimeout(1000);
+                    }
+                })
+            }
+            $("#btnValider").on('click', function (){
+                let combo_doc = document.querySelector('#documents_stats');
+                let combo_reprise = document.querySelector('#reprises');
+                let quantite = document.querySelector('#quantite');
+
+                {% if(app.user.codeOperateur.id == 2) %}
+                // Si l'opérateur est un exploitant forestier
+                            if (
+                                combo_doc.value === "0" ||
+                                combo_reprise.value === "0" ||
+                                quantite.value === "0" ||
+                                quantite.value === null){
+                                alert('{% trans %}You must type all values before sending request{% endtrans %}');
+                            } else {
+                                /*snvlt/demandes_op/save/{id_type_doc}/{qte}/{id_reprise}*/
+                                $.ajax({
+                                    url:'{{ url('app_login')}}snvlt/demandes_op/save/' + combo_doc.value + "/" + combo_reprise.value + "/" + quantite.value,
+                                    type : 'POST',
+                                    data : {
+                                        id_type_doc: combo_doc.value,
+                                        id_reprise: combo_reprise.value,
+                                        qte: quantite.value,
+                                    },
+                                    success: function(response){
+
+                                        document.location.href = "{{ app.request.get('referer')}}"
+                                    }
+                                })
+
+                            }
+                {% else %}
+                    var code_foret = 0;
+                    //Si l'opérateur est autre qu'un exploitant forestier
+                            if (
+                                combo_doc.value === "0" ||
+                                quantite.value === "0" ||
+                                quantite.value === null){
+                                alert('{% trans %}You must type all values before sending request{% endtrans %}');
+                            } else {
+
+                                $.ajax({
+                                    url:'{{ url('app_login')}}snvlt/demandes_op/save/' + combo_doc.value + "/" + code_foret + "/" + quantite.value,
+                                    type : 'POST',
+                                    data : {
+                                        id_type_doc: combo_doc.value,
+                                        id_reprise: code_foret,
+                                        qte: quantite.value,
+                                    },
+                                    success: function(response){
+                                        document.location.href ="{{ path('app_demande_operateur') }}"
+                                    }
+                                })
+
+                            }
+                {% endif %}
+
+            })
+    </script>
+{% endblock %}
